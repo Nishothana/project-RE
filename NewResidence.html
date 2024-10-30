@@ -3,37 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheet.css">
+        <!-- <link rel="stylesheet" href="stylesheet.css"> -->
         <title>RESIDENCE</title>
     </head>
     <style>
         .header h1{
             font-size: 40px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             color: black;
-            background-color: gray;
+            background-image: url(img1.jpeg);
+            background-attachment: absolute;
             text-align: center;
         }
         .p{
-            padding: 50px;
+            padding: 100px;
             font-size: medium;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-right: 100px;
         }
         .row{
             display: flex;
             flex-direction: row;
+            background-color: antiquewhite;
+            padding: 20px;
         }
         .column{
             flex: 70%;
             padding: 20px;
-            background-color: cadetblue;
         }
         .side{
             flex: 30%;
             background-color: gray;
             padding: 20px;
+        }
+
+        .image {
+            width: 500px;
+            height: 400px;
+        }
+
+        .txt {
+            padding: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            margin-top: -20px;
         }
     </style>
     <body>
@@ -43,9 +56,38 @@
       </div>
       <!-- bodyn image content -->
        <div class="row">
-        <div class="column">
-            <img src="img1.jpeg" alt="Description of the image" class="stylesheet">
+           <div class="column1">
+             <img src="construction_1.jpeg" alt="Description of the image" class="image">
+           </div>
+            <div class="column2">
+               <p class="txt">Our team of skilled architects, engineers, and designers work together to create residences that embody the perfect blend of
+                  </nbsp>
+                  aesthetic appeal and structural integrity. 
+                   We use only the finest materials and implement rigorous quality control measures to ensure durability and beauty in every project.
+                 </p>
+            </div>
         </div>
-       </div>
+        <div class="row">
+            <div class="column1">
+                <img src="construction_2.webp" alt="Description of the image1" class="image">
+            </div>
+            <div class="column2">
+                <p class="txt">We believe in building a greener future. That’s why we prioritize eco-friendly materials, energy-efficient systems,
+                     and sustainable construction practices. Our residences are designed with a minimal environmental footprint, integrating green spaces, 
+                     natural lighting, and energy-saving technology that allow our residents to live comfortably while reducing their impact on the planet.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column1">
+                <img src="consruction_3.webp" alt="Description of the image1" class="image">
+            </div>
+            <div class="column2">
+                <p class="txt">Each of our residential projects is crafted with community in mind. We carefully select locations and incorporate features that foster 
+                    a sense of belonging and community engagement. From shared recreational spaces to landscaped gardens, our residences create environments where neighbors 
+                    become friends and families thrive.
+                </p>
+            </div>
+        </div>
     </body>
 </html>
