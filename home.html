@@ -3,24 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Construction Redefined</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="overlay">
-            <div class="top-bar">
-                <img src="assets/logo.png" alt="Logo" class="logo">
-                <div class="menu-icon">
-                    <img src="assets/menu icon.png" alt="Menu">
-                </div>
-            </div>
-            <div class="hero-content">
-                <h1>CONSTRUCTION <br> REDEFINED</h1>
-                <p>"Welcome to Shanmugam Associates – Your Trusted Partner in Construction Excellence! We bring visions to life through innovative construction solutions and unwavering commitment to quality."</p>
-                <a href="#" class="cta-button">Get Started</a>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <a href="home.html" class="logo">
+            <!-- Replace with your logo image path -->
+        </a>
+
+        <!-- Mobile Nav Toggle (Checkbox) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Label for Mobile Menu Icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <span class="icon-open">☰</span>
+            <span class="icon-close">✕</span>
+        </label>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="#">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="villa.html">Villa</a></li>
+                        <li><a href="painting.html">Painting</a></li>
+                        <li><a href="epoxy.html">Epoxy</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="newlogin.html"><i class="fa fa-sign-in" style="font-size:24px"></i> Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="overlay">
+        <div class="top-bar">
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <div class="menu-icon">
+                <img src="assets/menu icon.png" alt="Menu">
             </div>
         </div>
-    </header>
+        <div class="hero-content">
+            <h1>Building Dreams with Precision</h1>
+            <span class="separator"></span>
+            <p>Welcome to RealEstate– Your Reliable Partner in Construction Mastery! We specialize in transforming ideas into reality 
+                with cutting-edge construction solutions and a steadfast dedication to excellence and quality.</p>
+            <a href="#" class="hero-button">Get Started</a>
+        </div>
+    </div>
+</div>
+
+<!-- Gallery Section -->
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="assets/12.jpg" alt="Image 1" class="gallery-image">
+        <p class="description"><h4>Apartments</h4> Modern living spaces designed for comfort and 
+            convenience, offering a variety of amenities and community facilities.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/13.jpg" alt="Image 2" class="gallery-image">
+        <p class="description"><h4>Villas</h4> Luxurious, spacious homes that provide privacy and
+             elegance, often surrounded by scenic landscapes.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/1.jpg" alt="Image 3" class="gallery-image">
+        <p class="description"><h4>Complex Malls</h4> Bustling commercial centers that combine shopping,
+             dining, and entertainment, catering to diverse interests and lifestyles.</p>
+    </div>
+</div>
+
+<!-- Popup Modal -->
+<div class="popup">
+    <span class="close-btn">&times;</span>
+    <img class="popup-image" src="" alt="Popup Image">
+    <p class="popup-description"></p>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>RealEstate</h4>
+            <p class="footer-address">3/305c, Mahaganapathi Nagar<br>
+                NAGAMALAIPUTHUKOTTAI<br>
+                MADURAI-625 514</p>
+            <p>Phone: +91 9843036350</p>
+            <p>Email: nishoaathi@gmail.com</p>
+        
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>About us</h4>
+            <h4>Investors</h4>
+            <h4>Media & Blogs</h4>
+        </div>
+        <div class="footer-column">
+            <h4>Portfolio</h4>
+            <h4>Awards</h4>
+            <h4>Projects</h4>
+        </div>
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <h4>Privacy Policy</h4>
+            <h4>Terms and Conditions</h4>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; Copyright <strong>RealEstate</strong> All Rights Reserved</p>
+        <p>Designed by <a href="#">project-RE</a></p>
+    </div>
+</footer>
+
 </body>
 </html>
