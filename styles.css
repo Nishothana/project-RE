@@ -1,0 +1,64 @@
+
+        .header h1{
+            font-size: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .container{
+            background-image: url(Images/img1.jpeg);
+            width: auto;
+            height: 120px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .p{
+            padding: 100px;
+            font-size: medium;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            background-color: whitesmoke;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        .column{
+            flex: 70%;
+            padding: 20px;
+        }
+
+        .txt {
+            padding: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            margin-top: -30px;
+            text-align: center;
+        }
+
+        .scroll {
+            padding: 0;
+            height: 300px;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            display: flex;
+            animation: scroll 10s linear infinite;
+        }
+
+        /* @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100px);
+            }
+        } */
+
+        .i {
+            padding: 20px;
+        }

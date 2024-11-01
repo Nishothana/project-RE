@@ -3,91 +3,169 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="stylesheet.css"> -->
+        <link rel="stylesheet" href="slideshowss.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <title>RESIDENCE</title>
     </head>
-    <style>
-        .header h1{
-            font-size: 40px;
-            font-family: 'Courier New', Courier, monospace;
-            color: black;
-            background-image: url(img1.jpeg);
-            background-attachment: absolute;
-            text-align: center;
-        }
-        .p{
-            padding: 100px;
-            font-size: medium;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .row{
-            display: flex;
-            flex-direction: row;
-            background-color: antiquewhite;
-            padding: 20px;
-        }
-        .column{
-            flex: 70%;
-            padding: 20px;
-        }
-        .side{
-            flex: 30%;
-            background-color: gray;
-            padding: 20px;
-        }
-
-        .image {
-            width: 500px;
-            height: 400px;
-        }
-
-        .txt {
-            padding: 20px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            margin-top: -20px;
-        }
-    </style>
-    <body>
         <!-- header -->
       <div class="header">
         <h1>RESIDENCE</h1>
       </div>
       <!-- bodyn image content -->
-       <div class="row">
-           <div class="column1">
-             <img src="construction_1.jpeg" alt="Description of the image" class="image">
+       <body>
+          <!-- container items-->
+           <div class="container">
+                <h2>Welcome to RESIDENCE</h2>
+                <h>Buy your  dream home with us</h>
+                <!-- marquee for scrolling text -->
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    Welcome to our dream house property! Enjoy your stay and explore our services.
+                </marquee>
            </div>
-            <div class="column2">
-               <p class="txt">Our team of skilled architects, engineers, and designers work together to create residences that embody the perfect blend of
-                  </nbsp>
-                  aesthetic appeal and structural integrity. 
-                   We use only the finest materials and implement rigorous quality control measures to ensure durability and beauty in every project.
-                 </p>
+         <br>
+           <!-- image content -->
+            <!-- Slide show -->
+            <div class="slideshowss">
+                <div class="slideshow-container">
+                    <div class="slides active">
+                        <img src="Images/commercial-building.jpg" alt="Image 1">
+                    </div>
+                    <div class="slides">
+                        <img src="Images/commercial-building1.jpg" alt="Image 2">
+                    </div>
+                    <div class="slides">
+                        <img src="Images/commercial-building.jpg" alt="Image 3">
+                    </div>
+                    <div class="slides">
+                        <img src="Images/commercial-building1.jpg" alt="Image 4">
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="column1">
-                <img src="construction_2.webp" alt="Description of the image1" class="image">
+            <!--Slide show Content-->
+            <script>
+                let slideIndex = 1; // Start with the first slide
+                showSlides(slideIndex); // Display the first slide
+            
+                // Function to change the slide
+                function changeSlide(n) {
+                    showSlides(slideIndex += n);
+                }
+            
+                // Function to set the current slide
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+            
+                // Function to display the slides
+                function showSlides(n) {
+                    let i;
+                    const slides = document.getElementsByClassName("slides");
+                    const dots = document.getElementsByClassName("dot");
+            
+                    // Loop through the slides and hide them
+                    if (n > slides.length) { slideIndex = 1; }
+                    if (n < 1) { slideIndex = slides.length; }
+            
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+            
+                    // Loop through the dots and remove the active class
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+            
+                    // Show the current slide and add active class to the corresponding dot
+                    slides[slideIndex - 1].style.display = "block";  
+                    dots[slideIndex - 1].className += " active";
+                }
+            
+                // Optional: Automatic slideshow
+                // setInterval(() => {
+                //     changeSlide(1); // Automatically change to the next slide every 5 seconds
+                // }, 5000);
+            </script>
+            <!-- row1 -->
+            <div class="row">
+                <div class="column1">
+                    <img src="Images/commercial-building.jpg" alt="Description of the image" class="image">
+                </div>
+                <nbsp></nbsp>
+                <div class="column2">
+                    <h2>Spacious Luxury Restratent with Ocean View with Garden & Pool in Whitefield</h2>
+                    <p>
+                    <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
+                    <br>
+                    <i class="fas fa-dollar-sign"></i>
+                    Price: 1.5 Cr
+                    <br>
+                    <i class="fas fa-check"></i>
+                    Property Status: New
+                    <br>
+                    <i class="fas fa-ruler"></i>
+                    Property Size: 2500 sqft
+                    <br>
+                    <i class="fas fa-clock"></i> 
+                    Property Age: 5 years</p>
+                </div>
             </div>
-            <div class="column2">
-                <p class="txt">We believe in building a greener future. That’s why we prioritize eco-friendly materials, energy-efficient systems,
-                     and sustainable construction practices. Our residences are designed with a minimal environmental footprint, integrating green spaces, 
-                     natural lighting, and energy-saving technology that allow our residents to live comfortably while reducing their impact on the planet.
-                </p>
+            <!-- row -->
+            <div class="row">
+                <div class="column1">
+                    <img src="Images/commercial-building1.jpg" alt="Description of the image" class="image">
+                </div>
+                <nbsp></nbsp>
+                <div class="column2">
+                    <h2>Spacious Luxury Restratent with Ocean View with Garden & Pool in Whitefield</h2>
+                    <p>
+                    <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
+                    <br>
+                    <i class="fas fa-dollar-sign"></i>
+                    Price: 1.5 Cr
+                    <br>
+                    <i class="fas fa-check"></i>
+                    Property Status: New
+                    <br>
+                    <i class="fas fa-ruler"></i>
+                    Property Size: 2500 sqft
+                    <br>
+                    <i class="fas fa-clock"></i> 
+                    Property Age: 5 years</p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="column1">
-                <img src="consruction_3.webp" alt="Description of the image1" class="image">
+            <!-- row 3-->
+            <div class="row">
+                <div class="column1">
+                    <img src="Images/commercial-building.jpg" alt="Description of the image" class="image">
+                </div>
+                <nbsp></nbsp>
+                <div class="column2">
+                    <h2>Spacious Luxury Restratent with Ocean View with Garden & Pool in Whitefield</h2>
+                    <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Kerala, Kochi
+                    <br>
+                    <i class="fas fa-dollar-sign"></i>
+                    Price: 1.5 Cr
+                    <br>
+                    <i class="fas fa-check"></i>
+                    Property Status: New
+                    <br>
+                    <i class="fas fa-ruler"></i>
+                    Property Size: 2500 sqft
+                    <br>
+                    <i class="fas fa-clock"></i> 
+                    Property Age: 5 years</p>
+                </div>
             </div>
-            <div class="column2">
-                <p class="txt">Each of our residential projects is crafted with community in mind. We carefully select locations and incorporate features that foster 
-                    a sense of belonging and community engagement. From shared recreational spaces to landscaped gardens, our residences create environments where neighbors 
-                    become friends and families thrive.
-                </p>
-            </div>
-        </div>
-    </body>
+       </body>
 </html>
