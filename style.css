@@ -1,156 +1,98 @@
-/* Reset */
+/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
-body {
+body, html {
+    height: 100%;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #EFE1D3; /* Lighter beige for text */
-    background-color: #0D0C0A; /* Dark gray background */
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Header styling */
-header {
-    background-color: #0D0C0A; /* Dark gray background for header */
-    color: #EFE1D3; /* Lighter beige for text in header */
-    padding: 1% 0;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    color: #EFE1D3; /* Lighter beige for logo text */
-}
-
-header nav ul {
-    list-style: none;
-}
-
-header nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #EFE1D3; /* Lighter beige for nav links */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    color: #FFFFFF; /* Highlight with white on hover */
 }
 
 /* Hero Section */
-#hero {
-    height: 500px;
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('assets/13.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    color: #EFE1D3; /* Lighter beige for text in hero */
-    background-color: #131313; /* Dark gray background */
+    align-items: center;
 }
 
-#hero h2 {
-    font-size: 3rem;
-    color: #FFFFFF; /* Highlight heading with white */
-}
-
-#hero p {
-    font-size: 1.2rem;
-    color: #EFE1D3; /* Lighter beige for paragraph text */
-}
-
-#hero .btn {
-    background-color: #8C5637; /* Brown for buttons */
-    color: #EFE1D3; /* Lighter beige for button text */
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-#hero .btn:hover {
-    background-color: #EFE1D3; /* Lighter beige on hover */
-    color: #0D0C0A; /* Dark gray text on hover */
-}
-
-/* Featured Properties Section */
-#properties {
-    padding: 2rem 0;
-    background-color: #0D0C0A; /* Dark gray background for properties */
-}
-
-#properties h3 {
-    text-align: center;
-    color: #FFFFFF; /* Highlight section heading with white */
-    margin-bottom: 1rem;
-}
-
-.property-list {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.property {
-    background-color: #EFE1D3; /* Lighter beige for property cards */
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.property img {
-    width: 100%;
-    height: auto;
+.logo {
+    width: 150px;
 }
 
-.property h4 {
-    margin-top: 1rem;
-    color: #0D0C0A; /* Dark gray for property headings */
+.menu-icon img {
+    width: 30px;
+    cursor: pointer;
+    filter: brightness(0) invert(1); /* White icon */
 }
 
-.property p {
-    margin: 0.5rem 0;
-    color: #8C5637; /* Brown for property description */
+/* Hero Content */
+.hero-content {
+    text-align: center;
+    color: white;
 }
 
-.property .btn {
-    background-color: #8C5637; /* Brown for buttons */
-    color: #EFE1D3; /* Lighter beige for button text */
-    padding: 0.5rem 1rem;
+.hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1em;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #ffd700; /* Yellow border */
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.property .btn:hover {
-    background-color: #EFE1D3; /* Lighter beige on hover */
-    color: #0D0C0A; /* Dark gray text on hover */
+.cta-button:hover {
+    background-color: #ffd700;
+    color: #000;
 }
 
-/* Footer Section */
-footer {
-    background-color: #0D0C0A; /* Dark gray background for footer */
-    color: #EFE1D3; /* Lighter beige for footer text */
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-/* Specific text highlight for important words */
-h2, h3, .highlight-text {
-    color: #FFFFFF; /* White for emphasis/highlight */
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .logo {
+        width: 100px;
+    }
 }
