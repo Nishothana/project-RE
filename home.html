@@ -14,16 +14,8 @@
     <div class="container">
         <a href="home.html" class="logo">
             <!-- Replace with your logo image path -->
+            <img src="assets/logo.png" alt="Logo">
         </a>
-
-        <!-- Mobile Nav Toggle (Checkbox) -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-        <!-- Label for Mobile Menu Icon -->
-        <label for="menu-toggle" class="menu-icon">
-            <span class="icon-open">☰</span>
-            <span class="icon-close">✕</span>
-        </label>
 
         <!-- Navbar -->
         <nav class="navbar">
@@ -32,7 +24,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li class="dropdown">
-                    <a href="#">Projects</a>
+                    <a href="#" onclick="toggleDropdown(event)">Projects</a>
                     <ul class="dropdown-menu">
                         <li><a href="villa.html">Villa</a></li>
                         <li><a href="painting.html">Painting</a></li>
@@ -49,15 +41,8 @@
 <!-- Hero Section -->
 <div class="hero-section">
     <div class="overlay">
-        <div class="top-bar">
-            <img src="assets/logo.png" alt="Logo" class="logo">
-            <div class="menu-icon">
-                <img src="assets/menu icon.png" alt="Menu">
-            </div>
-        </div>
         <div class="hero-content">
             <h1>Building Dreams with Precision</h1>
-            <span class="separator"></span>
             <p>Welcome to RealEstate– Your Reliable Partner in Construction Mastery! We specialize in transforming ideas into reality 
                 with cutting-edge construction solutions and a steadfast dedication to excellence and quality.</p>
             <a href="#" class="hero-button">Get Started</a>
@@ -68,27 +53,24 @@
 <!-- Gallery Section -->
 <div class="gallery">
     <div class="gallery-item">
-        <img src="assets/12.jpg" alt="Image 1" class="gallery-image">
-        <p class="description"><h4>Apartments</h4> Modern living spaces designed for comfort and 
-            convenience, offering a variety of amenities and community facilities.</p>
+        <img src="assets/12.jpg" alt="Image 1" class="gallery-image" data-description="Modern living spaces designed for comfort and convenience." onclick="openModal(this)">
+        <p class="description"><h4>Apartments</h4></p>
+    </div>
+    <div class="gallery-item center-item">
+        <img src="assets/13.jpg" alt="Image 2" class="gallery-image" data-description="Luxurious, spacious homes that provide privacy and elegance." onclick="openModal(this)">
+        <p class="description"><h4>Villas</h4></p>
     </div>
     <div class="gallery-item">
-        <img src="assets/13.jpg" alt="Image 2" class="gallery-image">
-        <p class="description"><h4>Villas</h4> Luxurious, spacious homes that provide privacy and
-             elegance, often surrounded by scenic landscapes.</p>
-    </div>
-    <div class="gallery-item">
-        <img src="assets/1.jpg" alt="Image 3" class="gallery-image">
-        <p class="description"><h4>Complex Malls</h4> Bustling commercial centers that combine shopping,
-             dining, and entertainment, catering to diverse interests and lifestyles.</p>
+        <img src="assets/1.jpg" alt="Image 3" class="gallery-image" data-description="Bustling commercial centers that combine shopping, dining, and entertainment." onclick="openModal(this)">
+        <p class="description"><h4>Complex Malls</h4></p>
     </div>
 </div>
 
-<!-- Popup Modal -->
-<div class="popup">
-    <span class="close-btn">&times;</span>
-    <img class="popup-image" src="" alt="Popup Image">
-    <p class="popup-description"></p>
+<!-- Modal for Image Popup -->
+<div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
 </div>
 
 <!-- Footer Section -->
@@ -130,6 +112,38 @@
         <p>Designed by <a href="#">project-RE</a></p>
     </div>
 </footer>
+
+<script>
+    function openModal(image) {
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("img01");
+        const captionText = document.getElementById("caption");
+        modal.style.display = "block";
+        modalImg.src = image.src;
+        captionText.innerHTML = `<div style="color: white;">${image.dataset.description}</div>`;
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    function toggleDropdown(event) {
+        event.stopPropagation(); // Prevent event bubbling
+        const dropdown = document.querySelector('.dropdown-menu');
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block"; // Toggle display
+    }
+
+    // Hide the dropdown when clicking outside
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown a')) {
+            const dropdowns = document.getElementsByClassName("dropdown-menu");
+            for (let i = 0; i < dropdowns.length; i++) {
+                dropdowns[i].style.display = "none";
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
