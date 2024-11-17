@@ -37,7 +37,7 @@ body {
 
 .nav-links a.active {
     font-weight: bold;
-    color: #1a3dab; /* Blue for active link */
+    color: #2f0030; /* Blue for active link */
     border-bottom: 2px solid #1a3dab; /* Active underline */
 }
 
@@ -45,17 +45,6 @@ body {
     color: #1a3dab; /* Hover color */
 }
 
-/* Red Dot for "New Launch" */
-.red-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    right: -10px;
-}
 
 /* Search Bar Section */
 .search-container {
