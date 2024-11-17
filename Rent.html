@@ -48,14 +48,14 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#">Buy</a></li>
-            <li><a href="#" class="active">Rent</a></li>
-            
-            <li><a href="#">PG / Co-living</a></li>
-            <li><a href="#">Commercial</a></li>
-            <li><a href="#">Plots/Land</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#" onclick="setActive(this)">Buy</a></li>
+            <li><a href="#" class="active" onclick="setActive(this)">Rent</a></li>
+            <li><a href="#" onclick="setActive(this)">PG / Co-living</a></li>
+            <li><a href="#" onclick="setActive(this)">Commercial</a></li>
+            <li><a href="#" onclick="setActive(this)">Plots/Land</a></li>
+            <li><a href="#" onclick="setActive(this)">Projects</a></li>
         </ul>
+        
         <div class="search-container">
             <select class="dropdown">
                 <option value="all-residential">All Residential</option>
@@ -134,3 +134,16 @@
       </div>
     </div>
   </footer>
+
+
+
+  <script>
+    function setActive(element) {
+        // Remove the 'active' class from all links
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add the 'active' class to the clicked link
+        element.classList.add('active');
+    }
+</script>
