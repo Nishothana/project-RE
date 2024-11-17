@@ -193,24 +193,26 @@ body {
 }
 
 
+
 /* Gallery Styles */
 .gallery {
   display: flex;
-  justify-content: center;
   gap: 20px;
   padding: 20px;
   margin: 0 auto;
+  animation: slide-right 40s linear infinite; /* Add sliding animation */
 }
 
 .gallery-item {
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color:  #A66832; /* White background for card effect */
+  background-color: #ffffff; /* Card background */
   border-radius: 10px;
   border: 1px solid #ddd; /* Light border around the card */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for card */
   width: 400px; /* Fixed size for consistency */
+  flex: 0 0 auto; /* Prevent items from shrinking or growing */
 }
 
 .gallery-image {
@@ -223,6 +225,16 @@ body {
 .gallery-item:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Keyframes for Sliding Animation */
+@keyframes slide-right {
+  0% {
+      transform: translateX(0); /* Start position */
+  }
+  100% {
+      transform: translateX(-100%); /* Slide to the left */
+  }
 }
 
 /* Description Styles */
