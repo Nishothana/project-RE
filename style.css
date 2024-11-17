@@ -1,17 +1,14 @@
 /* Header Styles */
 .header {
-    background-color: #4E3629; /* Dark brown */
+    background-color: #A66832; /* Dark brown */
     color: white;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    height: 70px;
+    justify-content: space-between; /* Space between logo and navbar */
     align-items: center;
 }
 
-/* Logo */
-.logo img {
-    height: 50px;
-}
 
 /* Navbar Styles */
 .navbar {
@@ -27,6 +24,7 @@
     list-style-type: none;
     gap: 20px;
 }
+
 /* Navbar Links Hover Effect */
 .navbar-links li a {
     color: white;
@@ -48,8 +46,6 @@
     background-color: rgb(255, 255, 255); /* Optional: Light background on active */
 }
 
-
-
 /* Dropdown menu */
 .dropdown-menu {
     display: none;
@@ -59,6 +55,7 @@
     min-height: 40px;
     z-index: 1;
 }
+
 /* Dropdown items */
 .dropdown-menu li {
     padding: 7px 9px; /* Adds space between the top and bottom words */
@@ -124,6 +121,7 @@
         display: flex; /* Show the menu when hamburger is clicked */
     }
 }
+
 
 /* Hero Section */
 .hero-section {
