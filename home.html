@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Construction Redefined</title>
+    <title>Project-RE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,18 +57,36 @@
 </div>
 
 <!-- Gallery Section -->
-<div class="gallery">
-    <div class="gallery-item">
-        <img src="assets/12.jpg" alt="Image 1" class="gallery-image" data-description="Modern living spaces designed for comfort and convenience." onclick="openModal(this)">
-        <p class="description"><h4>Apartments</h4></p>
+<div class="gallery row">
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="assets/12.jpg" alt="Image 1" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">Apartments</h4>
+                <p class="card-text">Modern living spaces designed for comfort and convenience.</p>
+                <button class="btn btn-primary" onclick="openModal(this)">View Details</button>
+            </div>
+        </div>
     </div>
-    <div class="gallery-item center-item">
-        <img src="assets/13.jpg" alt="Image 2" class="gallery-image" data-description="Luxurious, spacious homes that provide privacy and elegance." onclick="openModal(this)">
-        <p class="description"><h4>Villas</h4></p>
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="assets/13.jpg" alt="Image 2" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">Villas</h4>
+                <p class="card-text">Luxurious, spacious homes that provide privacy and elegance.</p>
+                <button class="btn btn-primary" onclick="openModal(this)">View Details</button>
+            </div>
+        </div>
     </div>
-    <div class="gallery-item">
-        <img src="assets/1.jpg" alt="Image 3" class="gallery-image" data-description="Bustling commercial centers that combine shopping, dining, and entertainment." onclick="openModal(this)">
-        <p class="description"><h4>Complex Malls</h4></p>
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="assets/1.jpg" alt="Image 3" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">Complex Malls</h4>
+                <p class="card-text">Bustling commercial centers that combine shopping, dining, and entertainment.</p>
+                <button class="btn btn-primary" onclick="openModal(this)">View Details</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -80,6 +98,7 @@
         <div id="caption"></div>
     </div>
 </div>
+
 <!--our commitments-->
 <section class="scrollable-section">
     <h2>Our Commitment</h2>
