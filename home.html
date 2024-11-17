@@ -12,31 +12,39 @@
 <!-- Header Section -->
 <header class="header">
     <div class="container">
+        <!-- Logo -->
         <a href="home.html" class="logo">
-            <!-- Replace with your logo image path -->
             <img src="assets/logo.png" alt="Logo">
         </a>
 
         <!-- Navbar -->
         <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
+                <li><a href="about.html" class="nav-link" onclick="highlightLink(event)">About Us</a></li>
+                <li><a href="services.html" class="nav-link" onclick="highlightLink(event)">Services</a></li>
                 <li class="dropdown">
-                    <a href="#" onclick="toggleDropdown(event)">Projects</a>
+                    <a href="#" class="nav-link" onclick="toggleDropdown(event)">Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a href="villa.html">Villa</a></li>
-                        <li><a href="painting.html">Painting</a></li>
-                        <li><a href="epoxy.html">Epoxy</a></li>
+                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Villa</a></li>
+                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">Painting</a></li>
+                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Epoxy</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="newlogin.html"><i class="fa fa-sign-in" style="font-size:24px"></i> Login</a></li>
+                <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Contact</a></li>
+                <li><a href="newlogin.html" class="nav-link" onclick="highlightLink(event)"><i class="fa fa-sign-in" style="font-size:24px"></i> Login</a></li>
             </ul>
+
+            <!-- Hamburger Menu (3 lines) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </div>
 </header>
+
 
 <!-- Hero Section -->
 <div class="hero-section">
@@ -136,6 +144,21 @@
             <div id="caption">${img.dataset.description}</div>
         </div>`;
 }
+// Toggle function for the hamburger menu
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('open');
+}
+// Add the active class to the clicked link and remove it from others
+const navbarLinks = document.querySelectorAll('.navbar-links li a');
+
+navbarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbarLinks.forEach(link => link.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
 
 function closeModal() {
     const modal = document.getElementById("myModal");
