@@ -69,9 +69,12 @@
 <!-- Modal for Image Popup -->
 <div id="myModal" class="modal" onclick="closeModal()">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
+    <div class="modal-box">
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
 </div>
+
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -114,35 +117,31 @@
 </footer>
 
 <script>
-    function openModal(image) {
-        const modal = document.getElementById("myModal");
-        const modalImg = document.getElementById("img01");
-        const captionText = document.getElementById("caption");
-        modal.style.display = "block";
-        modalImg.src = image.src;
-        captionText.innerHTML = `<div style="color: white;">${image.dataset.description}</div>`;
-    }
+  function openModal(img) {
+    const modal = document.getElementById("myModal");
+    const modalContent = modal.querySelector(".modal-content");
+    const captionText = modal.querySelector("#caption");
+    
+    // Show modal
+    modal.style.display = "flex";
+    
+    // Set image and description
+    modalContent.src = img.src;
+    captionText.innerHTML = img.dataset.description;
 
-    function closeModal() {
-        const modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    }
+    // Add white box for content
+    modalContent.outerHTML = `
+        <div class="modal-box">
+            <img src="${img.src}" alt="${img.alt}">
+            <div id="caption">${img.dataset.description}</div>
+        </div>`;
+}
 
-    function toggleDropdown(event) {
-        event.stopPropagation(); // Prevent event bubbling
-        const dropdown = document.querySelector('.dropdown-menu');
-        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block"; // Toggle display
-    }
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
 
-    // Hide the dropdown when clicking outside
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropdown a')) {
-            const dropdowns = document.getElementsByClassName("dropdown-menu");
-            for (let i = 0; i < dropdowns.length; i++) {
-                dropdowns[i].style.display = "none";
-            }
-        }
-    }
 </script>
 
 </body>

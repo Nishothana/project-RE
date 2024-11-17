@@ -113,48 +113,87 @@ body, html {
     color: #A66832;
 }
 
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Gallery Styles */
 .gallery {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
-    gap: 20px; /* Space between gallery items */
+    gap: 20px;
+    padding: 20px;
 }
 
 .gallery-item {
-    width: 30%; /* Set width for items */
-    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-image {
-    width: 100%; /* Full width */
-    border-radius: 8px;
+    width: 300px; /* Increased size */
+    height: 200px; /* Increased size */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* Center Item */
-.center-item {
-    margin: 0 20px; /* Extra margin for center item */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.description h4 {
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
+    max-width: 90%;
+    max-height: 80%;
     margin: auto;
     display: block;
-    width: 80%; /* Adjust width */
-    max-width: 700px; /* Max width for large screens */
+    border-radius: 10px;
+}
+
+.modal-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.modal-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal-box #caption {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
 }
 
 .close {
@@ -165,6 +204,11 @@ body, html {
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
 }
 
 /* Caption */
