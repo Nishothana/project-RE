@@ -61,7 +61,7 @@ body, html {
 .hero-section {
     position: relative;
     height: 100vh;
-    background-image: url('assets/15.jpg');
+    background-image: url('project-RE/assets/21.webp');
     background-size: cover;
     background-position: center;
 }
@@ -136,8 +136,8 @@ body {
 }
 
 .gallery-image {
-    width: 300px; /* Increased size */
-    height: 200px; /* Increased size */
+    width: 400px; /* Increased size */
+    height: 300px; /* Increased size */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -176,9 +176,9 @@ body {
 }
 
 .modal-box {
-    background: white;
+    background: #A66832;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     text-align: center;
     width: 90%;
     max-width: 600px;
@@ -193,7 +193,7 @@ body {
 .modal-box #caption {
     margin-top: 10px;
     font-size: 18px;
-    color: #333;
+    color: #fff;
 }
 
 .close {
@@ -208,7 +208,7 @@ body {
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color: #A66832;
 }
 
 /* Caption */
