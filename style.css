@@ -1,6 +1,6 @@
 /* Header Styles */
 .header {
-    background-color: #A66832; /* Dark brown */
+    background-color: #A66832 ; /* Dark brown */
     color: white;
     padding: 5px 20px; /* Reduced padding to make the header shorter */
     display: flex;
@@ -55,6 +55,7 @@
     color: #000000;
     min-width: 120px;
     min-height: 40px;
+    border-radius: 10px;
     z-index: 1;
 }
 
@@ -71,7 +72,7 @@
 
 /* Hover effect for dropdown items */
 .dropdown-menu li a:hover {
-    background-color: #7a400e; /* Highlight on hover */
+    background-color: #bd691f; /* Highlight on hover */
     color: #fff;
     border-radius: 5px;
 }
@@ -287,33 +288,51 @@ body {
     color: white; /* White text for description */
     margin-top: 10px;
 }
-
+/*Footer*/
 body {
     font-family: Arial, sans-serif;
   }
-  
   footer {
-    background-color: #f8f9fa;
+    background-color: #A66832;
     padding: 20px 0;
   }
   
   .footer-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
     flex-wrap: wrap;
+    padding: 0 20px;
   }
   
   .footer-section {
     flex: 1;
     margin: 0 10px;
     min-width: 150px;
+    color: #e9ecef;
+  }
+  
+  .company-info {
+    flex: 2;
   }
   
   .footer-section h4 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
   }
   
   .footer-section ul {
@@ -325,24 +344,8 @@ body {
     margin-bottom: 5px;
   }
   
-  .footer-section ul li a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .footer-section ul li a:hover {
-    text-decoration: underline;
-  }
-  
   .newsletter-section {
     flex: 2;
-    margin: 0 10px;
-  }
-  
-  .newsletter-section h4 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
   }
   
   .newsletter-section form {
@@ -360,7 +363,7 @@ body {
   
   .newsletter-section button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff8f2d;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -368,7 +371,7 @@ body {
   }
   
   .newsletter-section button:hover {
-    background-color: #0056b3;
+    background-color: #512a09;
   }
   
   .footer-bottom {
@@ -379,20 +382,36 @@ body {
     padding: 0 20px;
     border-top: 1px solid #e9ecef;
     padding-top: 10px;
+    flex-wrap: wrap;
+    text-align: center;
   }
   
   .footer-bottom p {
-    margin: 0;
+    margin: 5px 0;
+    flex: 1;
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
   }
   
   .social-icons a {
-    margin-left: 10px;
     color: #000;
     text-decoration: none;
     font-size: 18px;
   }
   
   .social-icons a:hover {
-    color: #007bff;
+    color: #ffffff;
   }
   
