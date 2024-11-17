@@ -80,7 +80,43 @@
         <div id="caption"></div>
     </div>
 </div>
+<!--our commitments-->
+<section class="scrollable-section">
+    <h2>Our Commitment</h2>
+    <div class="scroll-container">
+      <div class="card">
+        <h3>1/4</h3>
+        <h4>Our Story</h4>
+        <p>We bring the diverse knowledge of our people, clients, and partners to realize potential in every business and every person.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card">
+        <h3>2/4</h3>
+        <h4>Corporate Responsibility</h4>
+        <p>We take great pride in our reputation for upholding the highest standards in the way we do business.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card">
+        <h3>3/4</h3>
+        <h4>Sustainability</h4>
+        <p>Minimizing the environmental impact of the built environment is both a responsibility and an opportunity. We’re making proactive decisions to ensure a sustainable future.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card">
+        <h3>4/4</h3>
+        <h4>Diversity</h4>
+        <p>We embrace diversity in all forms, fostering an inclusive culture that empowers individuals and strengthens our business.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </section>
+  <div class="scroll-buttons">
+    <button id="scroll-left">←</button>
+    <button id="scroll-right">→</button>
+  </div>
+  
 
+<br>
 
 <!-- Footer Section -->
 <footer>
@@ -181,6 +217,18 @@ function closeModal() {
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
 }
+const scrollContainer = document.querySelector('.scroll-container');
+const scrollLeft = document.getElementById('scroll-left');
+const scrollRight = document.getElementById('scroll-right');
+
+scrollLeft.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+scrollRight.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
 
 </script>
 

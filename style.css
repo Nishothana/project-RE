@@ -1,7 +1,7 @@
 /* Header Styles */
 .header {
-    background-color: #A66832 ; /* Dark brown */
-    color: white;
+    background-color: #ffffff ; /* Dark brown */
+    color:#A66832 ;
     padding: 5px 20px; /* Reduced padding to make the header shorter */
     display: flex;
     height: 50px; /* Reduced header height */
@@ -26,7 +26,7 @@
 
 /* Navbar Links Hover Effect */
 .navbar-links li a {
-    color: white;
+    color: #A66832;
     text-decoration: none;
     padding: 8px 12px;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -36,8 +36,8 @@
 
 /* Highlight text on hover */
 .navbar-links li a:hover {
-    color: #000000; /* Highlight color (mild brown) */
-    background-color: rgb(255, 255, 255); /* Light background effect */
+    color: #ffffff; /* Highlight color (mild brown) */
+    background-color: #A66832; /* Light background effect */
     border-radius: 5px; /* Optional: Add a slight border-radius for a smoother look */
 }
 
@@ -288,6 +288,95 @@ body {
     color: white; /* White text for description */
     margin-top: 10px;
 }
+.scrollable-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .scrollable-section h2 {
+    font-size: 32px;
+    color: #A66832;
+    margin-bottom: 20px;
+  }
+  
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 4px;
+  }
+  
+  .card {
+    flex: 0 0 300px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(246, 131, 43, 0.543);
+    text-align: left;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    color: #A66832;
+    margin-bottom: 10px;
+  }
+  
+  .card h4 {
+    font-size: 20px;
+    color: #013220;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .card a {
+    color: #A66832;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  .scroll-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .scroll-buttons button {
+    background-color:#A66832;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .scroll-buttons button:hover {
+    background-color: #A66832;
+  }
+  
 /*Footer*/
 body {
     font-family: Arial, sans-serif;
