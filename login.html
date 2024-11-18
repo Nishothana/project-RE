@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Login Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Login Page</title>
 </head>
 <style>
     /* General Reset */
@@ -16,7 +15,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: #4E3629; /* Theme background color */
+      background: #ffffff; /* Theme background color */
       color: #fff;
       overflow: hidden;
     }
@@ -27,8 +26,8 @@
       justify-content: space-between;
       align-items: center;
       width: 80%;
-      max-width: 1000px;
-      background: rgba(255, 255, 255, 0.05); /* Slight transparency for contrast */
+      max-width: 1050px;
+      background: rgba(255, 255, 255, 0.817); /* Slight transparency for contrast */
       border-radius: 15px;
       padding: 40px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -39,8 +38,8 @@
     /* Login Box */
     .login-box {
       flex: 1;
-      padding: 20px;
-      width: 200px;
+      padding: 40px;
+      width: 400px;
     }
     
     h1 {
@@ -56,18 +55,18 @@
     }
     
     form input {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(116, 116, 116, 0.194);
       border: none;
       border-radius: 10px;
       padding: 15px;
       margin-bottom: 15px;
       font-size: 16px;
-      color: #fff;
+      color: #000000;
       outline: none;
     }
     
     form input::placeholder {
-      color: #ccc;
+      color: #969393;
     }
     
     form button {
@@ -83,7 +82,7 @@
     }
     
     form button:hover {
-      background: #854E29; /* Darker shade for hover effect */
+      background: #5d361d; /* Darker shade for hover effect */
     }
     
     .links {
@@ -93,14 +92,14 @@
     }
     
     .links a {
-      color: #ccc;
+      color: #a6a4a4;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 12px;
       transition: color 0.3s;
     }
     
     .links a:hover {
-      color: #fff;
+      color: #070707;
     }
     
     /* Illustration Section */
@@ -111,7 +110,7 @@
     
     .illustration img {
       max-width: 300px;
-      animation: float 3s infinite ease-in-out;
+      animation: float 4s infinite ease-in-out;
     }
     
     /* Floating Animation */
@@ -123,48 +122,46 @@
         transform: translateY(-10px);
       }
     }
-    
     /* Background Circles */
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      z-index: 0;
-      filter: blur(20px); /* Apply blur effect */
-    }
-    
-/* Background Circles */
 .circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05); /* Reduced opacity */
-  z-index: 0;
+  background: rgba(255, 255, 255, 0.08); /* Reduced opacity */
+  z-index: -1; /* Push circles behind all other elements */
 }
 
 /* Individual Circles */
 .circle-small {
-  width: 150px;
-  height: 150px;
-  top: -50px;
+  width: 200px;
+  height: 200px;
+  top: -60px;
   left: -50px;
-  background: rgba(166, 104, 50, 0.1); /* Theme circle color with reduced opacity */
+  background: rgba(223, 141, 68, 0.4); /* Theme circle color with reduced opacity */
 }
 
 .circle-medium {
-  width: 200px;
-  height: 200px;
-  bottom: -50px;
+  width: 250px;
+  height: 250px;
+  bottom: -90px;
   left: 20%;
-  background: rgb(78, 54, 41); /* Theme circle color with reduced opacity */
+  background: rgba(255, 123, 7, 0.2); /* Theme circle color with reduced opacity */
 }
 
 .circle-large {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   top: -80px;
   right: -100px;
-  background: rgb(166, 104, 50); /* Theme circle color with reduced opacity */
+  background: rgba(236, 132, 40, 0.2); /* Theme circle color with reduced opacity */
 }
+
+/* Adjust z-index for the form container */
+.login-wrapper {
+  position: relative; /* Ensures stacking context for z-index */
+  z-index: 2; /* Place the form above the circles */
+}
+
+    
 
     </style>
     
@@ -187,7 +184,7 @@
           </form>
           <div class="links">
             <a href="#">REGISTER</a>
-            <a href="#">FORGOT PASSWORD</a>
+            <a href="#">FORGOT PASSWORD?</a>
           </div>
         </div>
       
