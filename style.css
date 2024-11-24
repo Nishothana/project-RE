@@ -457,8 +457,8 @@ body {
     left: 50%; /* Horizontal positioning */
     transform: translate(-50%, -50%); /* Center the text */
     color: white; /* Text color */
-    font-size: 24px; /* Font size */
-    font-family: Arial, sans-serif; /* Font family */
+    font-size: 42px; /* Font size */
+    font-family: serif; /* Font family */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional text shadow for better readability */
     text-align: center; /* Center the text */
     padding: 10px; /* Optional padding for the text box */
