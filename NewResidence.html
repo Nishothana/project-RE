@@ -51,44 +51,22 @@
                   </marquee>
              </div>
            <br>
-           <!-- Slideshow content -->
-           <div class="slideshow-container">
-            <div class="slides">
-              <img src="Images/img1.jpeg" height="700" width="800">
-              <img src="Images/pic1.webp" height="700" width="800">
-              <img src="Images/pic6.jpg"  height="700" width="800">
-              <img src="Images/pic7.jpg"  height="700" width="800">
-    
+
+           <!--Background image-->
+           <div class="img">
+            <div class="text-style">
+              <h1>RESIDENCE</h1>
             </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-          </div>
-        
-          <script>
-            let currentIndex = 0;
-        
-            function moveSlide(direction) {
-              const slides = document.querySelector('.slides');
-              const slideCount = slides.children.length;
-        
-              // Calculate the next index
-              currentIndex = (currentIndex + direction + slideCount) % slideCount;
-        
-              // Move the slides
-              slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-        
-            // Optional: Auto-slide every 3 seconds
-            setInterval(() => moveSlide(1), 3000);
-          </script>
-        <script src="script.js"></script>
+           </div>
 
        <!-- Gallery Section -->
+        +
 <div class="gallery row">
   <div class="gallery-item col-md-4">
       <div class="card">
           <img src="Images/pic2.jpg" alt="Image 1" class="card-img-top">
           <div class="card-body">
+            <center>
             <h2>Spacious Luxury Restaurant with Ocean View with Garden & Pool in Whitefield</h2>
             <p>
             <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
@@ -104,6 +82,7 @@
             <br>
             <i class="fas fa-clock"></i> 
             Property Age: 5 years</p>
+          </center>
           </div>
       </div>
   </div>
@@ -111,6 +90,7 @@
       <div class="card">
           <img src="Images/pic3.jpg" alt="Image 2" class="card-img-top">
           <div class="card-body">
+          <center>
             <h2>This property redefines luxury living with its thoughtfully designed spaces and premium finishes</h2>
             <p>
             <i class="fas fa-map-marker-alt"></i>Coimbatore, Kuniyamuthur
@@ -126,6 +106,7 @@
             <br>
             <i class="fas fa-clock"></i> 
             Property Age: 2 years</p>
+          </center>
           </div>
       </div>
   </div>
@@ -133,6 +114,7 @@
       <div class="card">
           <img src="Images/pic4.jpg" alt="Image 3" class="card-img-top">
           <div class="card-body">
+            <center>
             <h2>This residence is an eco-friendly haven, designed with sustainability and energy efficiency in mind</h2>
                     <p>
                     <i class="fas fa-map-marker-alt"></i>
@@ -149,6 +131,7 @@
                     <br>
                     <i class="fas fa-clock"></i> 
                     Property Age: 1 years</p>
+                  </center>
           </div>
       </div>
   </div>
@@ -156,6 +139,7 @@
       <div class="card">
           <img src="Images/pic5.jpg" alt="Image 4" class="card-img-top">
           <div class="card-body">
+          <center>
             <h2>The property fosters a strong sense of community, with thoughtfully planned common areas and recreational facilities</h2>
             <p>
             <i class="fas fa-map-marker-alt"></i>
@@ -172,6 +156,7 @@
             <br>
             <i class="fas fa-clock"></i> 
             Property Age: 2 years</p>
+          </center>
           </div>
       </div>
   </div>
@@ -179,6 +164,7 @@
     <div class="card">
         <img src="Images/pic6.jpg" alt="Image 1" class="card-img-top">
         <div class="card-body">
+        <center>
           <h2>This residence is an eco-friendly haven, designed with sustainability and energy efficiency in mind</h2>
           <p>
           <i class="fas fa-map-marker-alt"></i>
@@ -195,6 +181,7 @@
           <br>
           <i class="fas fa-clock"></i> 
           Property Age: 1 years</p>
+          </center>
         </div>
     </div>
 </div>
@@ -202,6 +189,7 @@
     <div class="card">
         <img src="Images/pic7.jpg" alt="Image 2" class="card-img-top">
         <div class="card-body">
+        <center>
           <h2>Spacious Luxury Restaurant with Ocean View with Garden & Pool in Whitefield</h2>
           <p>
           <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
@@ -216,7 +204,8 @@
           Property Size: 2500 sqft
           <br>
           <i class="fas fa-clock"></i> 
-          Property Age: 5 years</p>
+          Property Age: 5 years</p>\
+        </center>    
         </div>
     </div>
 </div>
