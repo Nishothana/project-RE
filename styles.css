@@ -1,18 +1,12 @@
 
-        .header h1{
-            font-size: 40px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: black;
-            background-color: lightblue;
-            text-align: center;
-        }
 
         .container{
-            background-image: url(Images/img1.jpeg);
+            background-image: url("Images/pic6.jpg");
             width: auto;
             height: 120px;
             text-align: center;
             padding: 10px;
+            background-repeat: no-repeat;
         }
 
         .p{
@@ -24,7 +18,7 @@
         .row{
             display: flex;
             flex-direction: row;
-            background-color: whitesmoke;
+            background-color: rgba(195, 87, 60, 0.504);
             padding: 20px;
             margin-top: 15px;
         }
