@@ -214,6 +214,7 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
+
 /* Keyframes for Sliding Animation */
 @keyframes slide-right {
   0% {
@@ -224,27 +225,7 @@
   }
 }
 
-/* Description Styles */
-.description {
-  padding: 15px;
-  text-align: center;
-  align-items: center;
-}
 
-.description h4 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-top: 10px;
-  font-weight: bold;
- 
-}
-
-.gallery-item .description p {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #666;
-  
-}
 /*Footer*/
 body {
     font-family: Arial, sans-serif;
