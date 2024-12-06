@@ -133,45 +133,46 @@
     padding: 10px;
     background-repeat: no-repeat;
 }
-/* Slide */
-.slideshow-container {
+
+/* Background image */
+
+.img {
   position: relative;
-  max-width: 1500px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 5px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border: none;
+  height: 100vh;
+  background-image: url('Images/pic7.jpg'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
-.slides {
-  display: flex;
-  transition: transform 1s ease-in-out;
-  width: 200%;
- 
-}
-
-/* Navigation buttons */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+/* Text */
+.text-style {
+  text-align: center;
   color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 16px;
-  z-index: 10;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.text-content {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
 
-.prev:hover, .next:hover {
-  background-color: black;
+.text-pos {
+  font-size: 1.1em;
+  margin: 0 auto 20px;
+  max-width: 200px;
 }
 /* Gallery Styles */
 .gallery {
@@ -192,6 +193,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for card */
   width: 400px; /* Fixed size for consistency */
   flex: 0 0 auto; /* Prevent items from shrinking or growing */
+ 
 }
 /* Image Styling */
 .gallery-item img {
@@ -226,6 +228,7 @@
 .description {
   padding: 15px;
   text-align: center;
+  align-items: center;
 }
 
 .description h4 {
@@ -233,12 +236,14 @@
   color: #333;
   margin-top: 10px;
   font-weight: bold;
+ 
 }
 
 .gallery-item .description p {
   margin: 10px 0;
   font-size: 1rem;
   color: #666;
+  
 }
 /*Footer*/
 body {
