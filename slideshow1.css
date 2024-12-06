@@ -126,12 +126,12 @@
 }
 /*header image*/
 .container{
-    background-image: url("Images/pic6.jpg");
-    width: auto;
-    height: 120px;
+  font-size: medium;
     text-align: center;
     padding: 10px;
     background-repeat: no-repeat;
+    color: white;
+   
 }
 
 /* Background image */
@@ -139,19 +139,26 @@
 .img {
   position: relative;
   height: 100vh;
-  background-image: url('Images/pic7.jpg'); 
+  background-image: url('Images/img1.jpeg'); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
 }
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(23, 9, 9, 0.684);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* Text */
 .text-style {
-  text-align: center;
-  color: white;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 200%;
   position: absolute;
   top: 0;
   left: 0;
@@ -161,7 +168,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  text-align: center;
+  color: rgba(255, 255, 255, 0.93);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 200%;
 }
 
 .text-content {
@@ -190,7 +200,7 @@
   background-color: #ffffff; /* Card background */
   border-radius: 10px;
   border: 1px solid #ddd; /* Light border around the card */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for card */
+  box-shadow: 0 4px 6px rgba(186, 41, 41, 0.474); /* Subtle shadow for card */
   width: 400px; /* Fixed size for consistency */
   flex: 0 0 auto; /* Prevent items from shrinking or growing */
  
