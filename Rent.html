@@ -8,6 +8,7 @@
     <title>Project-RE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -74,6 +75,55 @@
             <button class="search-btn">Search</button>
         </div>
     </nav>
+    <br>
+
+<div class="image-container">
+  <img src="img/Apartment Building Exterior.jpg" width="1500" height="500">
+  <div class="line"> Rent / Sold</div>
+</div>
+  <div id="moving-boxes-container"></div>
+
+  <script>
+      // JavaScript for dynamic moving boxes
+      function createMovingBoxes() {
+          const container = document.getElementById("moving-boxes-container");
+
+          for (let i = 0; i < 10; i++) { // Create 10 boxes
+              const box = document.createElement("div");
+              box.className = "moving-box";
+
+              // Randomize initial position
+              box.style.left = `${Math.random() * window.innerWidth}px`;
+              box.style.top = `${Math.random() * window.innerHeight}px`;
+
+              // Append to container
+              container.appendChild(box);
+
+              // Animate box movement
+              animateBox(box);
+          }
+      }
+
+      function animateBox(box) {
+          const duration = Math.random() * 5 + 3; // Random duration between 3s and 8s
+
+          box.animate(
+              [
+                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` },
+                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` }
+              ],
+              {
+                  duration: duration * 1000,
+                  iterations: Infinity
+              }
+          );
+      }
+
+      // Call the function on page load
+      window.onload = createMovingBoxes;
+  </script>
+</body>
+
 </body>
 
 
