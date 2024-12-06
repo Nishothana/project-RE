@@ -4,16 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="slideshow1.css">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="s1.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <title>COMMERCIAL</title>
+        <title>RESIDENCE</title>
     </head>
     <!-- Header Section -->
 <header class="header">
-    
-       
-
         <!-- Navbar -->
         <nav class="navbar">
             <ul class="navbar-links">
@@ -46,142 +41,82 @@
        
           <!-- bodyn image content -->
           <body>
-            <!-- container items-->
-             <div class="container">
-                  <h2>COMMERCIAL </h2>
-                  <h>Buy your  dream home with us</h>
+             <!--Background image-->
+           <div class="img">
+            <div class="overlay">
+            <div class="text-style">
+              <h1>WELCOME TO COMMERCIAL</h1>
+              <div class="container">
+           
+                  <h2>Buy your  dream home with us</h2>
                   <!-- marquee for scrolling text -->
                   <marquee behavior="scroll" direction="left" scrollamount="5">
                       Welcome to our dream house property! Enjoy your stay and explore our services.
                   </marquee>
              </div>
+             </div>
+             </div>
+             </div>
            <br>
-           <!-- image content -->
-            <!-- Slide show -->
-            <div class="slideshowss">
-                <div class="slideshow-container">
-                    <div class="slides active">
-                        <img src="Images/pic6.jpg" alt="Image 1" height="500" width="600">
-                    </div>
-                    <div class="slides">
-                        <img src="Images/pic7.jpg" alt="Image 2" height="500" width="600">
-                    </div>
-                    <div class="slides">
-                        <img src="Images/pic8.jpg" alt="Image 3" height="500" width="600">
-                    </div>
-                    <div class="slides">
-                        <img src="Images/pic9.jpg" alt="Image 4" height="500" width="600">
-                    </div>
-                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-                </div>
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                </div>
-            </div>
-            <!--Slide show Content-->
-            <script>
-                let slideIndex = 1; // Start with the first slide
-                showSlides(slideIndex); // Display the first slide
+
+
+       <!-- Gallery Section -->
+        
+<div class="gallery row">
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="Images/pic2.jpg" alt="Image 1" class="card-img-top">
+          <div class="card-body" style="text-align: center;">
             
-                // Function to change the slide
-                function changeSlide(n) {
-                    showSlides(slideIndex += n);
-                }
+            <h1>Luxury Restaurant </h1>
+            <p>
+            <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
+            <br>
+            <i class="fas fa-dollar-sign"></i>
+            Price: 1.5 Cr
+            <br>
+            <i class="fas fa-check"></i>
+            Property Status: New
+            <br>
+            <i class="fas fa-ruler"></i>
+            Property Size: 2500 sqft
+            <br>
+            <i class="fas fa-clock"></i> 
+            Property Age: 5 years</p>
+          
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="Images/pic3.jpg" alt="Image 2" class="card-img-top">
+          <div class="card-body" style="text-align: center;">
+         
+            <h1>Penthouse</h1>
+            <p>
+            <i class="fas fa-map-marker-alt"></i>Coimbatore, Kuniyamuthur
+            <br>
+            <i class="fas fa-dollar-sign"></i>
+            Price: 1.2 Cr
+            <br>
+            <i class="fas fa-check"></i>
+            Property Status: New
+            <br>
+            <i class="fas fa-ruler"></i>
+            Property Size: 2200 sqft
+            <br>
+            <i class="fas fa-clock"></i> 
+            Property Age: 2 years</p>
+          
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="Images/pic4.jpg" alt="Image 3" class="card-img-top">
+          <div class="card-body" style="text-align: center;">
             
-                // Function to set the current slide
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-            
-                // Function to display the slides
-                function showSlides(n) {
-                    let i;
-                    const slides = document.getElementsByClassName("slides");
-                    const dots = document.getElementsByClassName("dot");
-            
-                    // Loop through the slides and hide them
-                    if (n > slides.length) { slideIndex = 1; }
-                    if (n < 1) { slideIndex = slides.length; }
-            
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-            
-                    // Loop through the dots and remove the active class
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-            
-                    // Show the current slide and add active class to the corresponding dot
-                    slides[slideIndex - 1].style.display = "block";  
-                    dots[slideIndex - 1].className += " active";
-                }
-            
-                // Optional: Automatic slideshow
-                // setInterval(() => {
-                //     changeSlide(1); // Automatically change to the next slide every 5 seconds
-                // }, 5000);
-            </script>
-            <!-- row1 -->
-            <div class="row">
-                <div class="column1">
-                    <img src="Images/pic10.jpg" alt="Description of the image" class="image">
-                </div>
-                <nbsp></nbsp>
-                <div class="column2">
-                    <h2>Spacious Luxury Restaurant with Ocean View with Garden & Pool in Whitefield</h2>
-                    <p>
-                    <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
-                    <br>
-                    <i class="fas fa-dollar-sign"></i>
-                    Price: 1.5 Cr
-                    <br>
-                    <i class="fas fa-check"></i>
-                    Property Status: New
-                    <br>
-                    <i class="fas fa-ruler"></i>
-                    Property Size: 2500 sqft
-                    <br>
-                    <i class="fas fa-clock"></i> 
-                    Property Age: 5 years</p>
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row">
-                <div class="column1">
-                    <img src="Images/pic11.jpg" alt="Description of the image" class="image">
-                </div>
-                <nbsp></nbsp>
-                <div class="column2">
-                    <h2>This property redefines luxury living with its thoughtfully designed spaces and premium finishes</h2>
-                    <p>
-                    <i class="fas fa-map-marker-alt"></i>Coimbatore, Kuniyamuthur
-                    <br>
-                    <i class="fas fa-dollar-sign"></i>
-                    Price: 1.2 Cr
-                    <br>
-                    <i class="fas fa-check"></i>
-                    Property Status: New
-                    <br>
-                    <i class="fas fa-ruler"></i>
-                    Property Size: 2200 sqft
-                    <br>
-                    <i class="fas fa-clock"></i> 
-                    Property Age: 2 years</p>
-                </div>
-            </div>
-            <!-- row 3-->
-            <div class="row">
-                <div class="column1">
-                    <img src="Images/pic12.jpg" alt="Description of the image" class="image">
-                </div>
-                <nbsp></nbsp>
-                <div class="column2">
-                    <h2>This residence is an eco-friendly haven, designed with sustainability and energy efficiency in mind</h2>
+            <h1>Flat</h1>
                     <p>
                     <i class="fas fa-map-marker-alt"></i>
                     Madurai, kk.nagar 
@@ -197,34 +132,87 @@
                     <br>
                     <i class="fas fa-clock"></i> 
                     Property Age: 1 years</p>
-                </div>
-            </div>
-                <!-- row 4-->
-                <div class="row">
-                    <div class="column1">
-                        <img src="Images/pic13.jpg" alt="Description of the image" class="image">
-                    </div>
-                    <nbsp></nbsp>
-                    <div class="column2">
-                        <h2>The property fosters a strong sense of community, with thoughtfully planned common areas and recreational facilities</h2>
-                        <p>
-                        <i class="fas fa-map-marker-alt"></i>
-                        Chennai, Kodambakkam
-                        <br>
-                        <i class="fas fa-dollar-sign"></i>
-                        Price: 2.5 Cr
-                        <br>
-                        <i class="fas fa-check"></i>
-                        Property Status: New
-                        <br>
-                        <i class="fas fa-ruler"></i>
-                        Property Size: 4000 sqft
-                        <br>
-                        <i class="fas fa-clock"></i> 
-                        Property Age: 2 years</p>
-                    </div>
-                </div>
+                  
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="Images/pic5.jpg" alt="Image 4" class="card-img-top">
+          <div class="card-body" style="text-align: center;">
+       
+            <h1>Premium Buildings</h1>
+            <p>
+            <i class="fas fa-map-marker-alt"></i>
+            Chennai, Kodambakkam
             <br>
+            <i class="fas fa-dollar-sign"></i>
+            Price: 2.5 Cr
+            <br>
+            <i class="fas fa-check"></i>
+            Property Status: New
+            <br>
+            <i class="fas fa-ruler"></i>
+            Property Size: 4000 sqft
+            <br>
+            <i class="fas fa-clock"></i> 
+            Property Age: 2 years</p>
+         
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+    <div class="card">
+        <img src="Images/pic6.jpg" alt="Image 1" class="card-img-top">
+        <div class="card-body" style="text-align: center;">
+        
+          <h1>Chambers</h1>
+          <p>
+          <i class="fas fa-map-marker-alt"></i>
+          Madurai, kk.nagar 
+          <br>
+          <i class="fas fa-dollar-sign"></i>
+          Price: 1.7 Cr
+          <br>
+          <i class="fas fa-check"></i>
+          Property Status: New
+          <br>
+          <i class="fas fa-ruler"></i>
+          Property Size: 3000 sqft
+          <br>
+          <i class="fas fa-clock"></i> 
+          Property Age: 1 years</p>
+          
+        </div>
+    </div>
+</div>
+<div class="gallery-item col-md-4">
+    <div class="card">
+        <img src="Images/pic7.jpg" alt="Image 2" class="card-img-top">
+        <div class="card-body" style="text-align: center;">
+       
+          <h1>Quaters</h1>
+          <p>
+          <i class="fas fa-map-marker-alt"></i>Kerala, Kochi
+          <br>
+          <i class="fas fa-dollar-sign"></i>
+          Price: 1.5 Cr
+          <br>
+          <i class="fas fa-check"></i>
+          Property Status: New
+          <br>
+          <i class="fas fa-ruler"></i>
+          Property Size: 2500 sqft
+          <br>
+          <i class="fas fa-clock"></i> 
+          Property Age: 5 years</p>\
+           
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
   <!-- Footer Section -->
 <footer>
     <div class="footer-container">
