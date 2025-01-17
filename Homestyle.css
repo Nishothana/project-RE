@@ -8,7 +8,9 @@
     justify-content: flex-end; /* Align content to the right */
     align-items: center;
 }
-
+body{
+  overflow-x: hidden;
+}
 /* Navbar Styles */
 .navbar {
     display: flex;
@@ -46,6 +48,8 @@
     color: #000000; /* Same highlight color as on hover */
     background-color: rgb(255, 255, 255); /* Optional: Light background on active */
 }
+
+
 
 /* Dropdown menu */
 .dropdown-menu {
