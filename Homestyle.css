@@ -445,20 +445,21 @@ body {
 /* city prefered*/
 .property-container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  color: #A66832;
 }
-
 .property-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 70px;
   margin-top: 20px;
 }
 
 .property-card {
-  width: 150px;
+  width: 100px;
   text-align: center;
+  color: #000;
 }
 
 .property-card img {
@@ -469,8 +470,9 @@ body {
 }
 
 .property-card h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
+  margin: 5px 0 5px;
+  font-size: 15px;
+  
 }
 
 .property-card p {
@@ -489,7 +491,7 @@ body {
 }
 
 .view-more-button:hover {
-  background-color: #512a09;
+  background-color:#512a09 ;
 }
 
 
