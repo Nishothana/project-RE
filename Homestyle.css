@@ -352,6 +352,7 @@ body {
   text-align: center;
   padding: 10px;
   color: #A66832;
+  background-color: #b0b0b01c;
 }
 .property-grid {
   display: flex;
