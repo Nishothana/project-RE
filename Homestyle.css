@@ -439,6 +439,62 @@ body {
     background-color: #A66832;
   }
   
+
+
+
+/* city prefered*/
+.property-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.property-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.property-card {
+  width: 150px;
+  text-align: center;
+}
+
+.property-card img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.property-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.property-card p {
+  margin: 0;
+  color: gray;
+}
+
+.view-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #A66832;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-more-button:hover {
+  background-color: #512a09;
+}
+
+
+
+
 /*Footer*/
 body {
     font-family: Arial, sans-serif;
