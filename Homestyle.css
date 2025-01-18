@@ -135,7 +135,7 @@ body{
 .hero-section {
     position: relative;
     height: 100vh;
-    background-image: url('assets/21.jpeg'); 
+    background-image: url('assets/herobg.jpg'); 
     background-size: cover; 
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -313,32 +313,33 @@ body {
 }
 
 .modal-box {
-    background: #A66832; /* Mild brown */
+    background: #a66832b5; /* Mild brown */
     padding: 20px;
     border-radius: 3px;
     text-align: center;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     margin: auto;
 }
 
 .modal-box img {
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
+    outline: 2px solid #fcfbfb;
 }
 
 .modal-box #caption {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 15px;
     color: white; /* White text for description */
 }
 
 .close {
     position: absolute;
     top: 10px;
-    right: 25px;
+    right: 15px;
     color: white;
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     cursor: pointer;
 }
