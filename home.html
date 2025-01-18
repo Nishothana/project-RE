@@ -74,7 +74,8 @@
 <div class="gallery row">
   <div class="gallery-item col-md-4">
       <div class="card">
-          <img src="assets/apartment.webp" alt="Image 1" class="card-img-top">
+          <img src="assets/apartment.webp" alt="Image 1" class="card-img-top"  data-description=" Modern living spaces designed for comfort and convenience. These apartments offer amenities like 24/7 security, community areas, and easy access to shopping and transportation, making them ideal for urban lifestyles.
+          ">
           <div class="card-body">
               <h4 class="card-title">Apartments</h4>
               <p class="card-text">Modern living spaces designed for comfort and convenience.</p>
@@ -84,7 +85,7 @@
   </div>
   <div class="gallery-item col-md-4">
       <div class="card">
-          <img src="assets/villa.webp" alt="Image 2" class="card-img-top">
+          <img src="assets/villa.webp" alt="Image 2" class="card-img-top" data-description="Luxurious, spacious homes that provide privacy and elegance. With large gardens, private pools, and premium fittings, these villas offer a serene retreat from the hustle of city life, perfect for those who appreciate the finer things.">
           <div class="card-body">
               <h4 class="card-title">Villas</h4>
               <p class="card-text">Luxurious, spacious homes that provide privacy and elegance.</p>
@@ -94,7 +95,7 @@
   </div>
   <div class="gallery-item col-md-4">
       <div class="card">
-          <img src="assets/mall.webp" alt="Image 3" class="card-img-top">
+          <img src="assets/mall.webp" alt="Image 3" class="card-img-top" data-description="Bustling commercial centers that combine shopping, dining, and entertainment. These malls house numerous retail stores, restaurants, cinemas, and play areas, making them a one-stop destination for families and friends.">
           <div class="card-body">
               <h4 class="card-title">Complex Malls</h4>
               <p class="card-text">Bustling commercial centers that combine shopping, dining, and entertainment.</p>
@@ -104,7 +105,7 @@
   </div>
   <div class="gallery-item col-md-4">
       <div class="card">
-          <img src="assets/mansion.webp" alt="Image 4" class="card-img-top">
+          <img src="assets/mansion.webp" alt="Image 4" class="card-img-top" data-description=" Grand, luxurious estates offering opulence, peaceful life, and serenity. These mansions feature expansive grounds, exquisite architecture, and state-of-the-art facilities, providing an unmatched living experience for the elite.">
           <div class="card-body">
               <h4 class="card-title">Mansion</h4>
               <p class="card-text">Grand, luxurious estates offering opulence,peaceful life and serenity .</p>
@@ -114,7 +115,8 @@
   </div>
   <div class="gallery-item col-md-4">
     <div class="card">
-        <img src="assets/apartment.webp" alt="Image 1" class="card-img-top">
+        <img src="assets/apartment.webp" alt="Image 1" class="card-img-top"  data-description=" Modern living spaces designed for comfort and convenience. These apartments offer amenities like 24/7 security, community areas, and easy access to shopping and transportation, making them ideal for urban lifestyles.
+        ">
         <div class="card-body">
             <h4 class="card-title">Apartments</h4>
             <p class="card-text">Modern living spaces designed for comfort and convenience.</p>
@@ -124,7 +126,7 @@
 </div>
 <div class="gallery-item col-md-4">
     <div class="card">
-        <img src="assets/villa.webp" alt="Image 2" class="card-img-top">
+        <img src="assets/villa.webp" alt="Image 2" class="card-img-top" data-description="Luxurious, spacious homes that provide privacy and elegance. With large gardens, private pools, and premium fittings, these villas offer a serene retreat from the hustle of city life, perfect for those who appreciate the finer things.">
         <div class="card-body">
             <h4 class="card-title">Villas</h4>
             <p class="card-text">Luxurious, spacious homes that provide privacy and elegance.</p>
@@ -134,7 +136,7 @@
 </div>
 <div class="gallery-item col-md-4">
     <div class="card">
-        <img src="assets/mall.webp" alt="Image 3" class="card-img-top">
+        <img src="assets/mall.webp" alt="Image 3" class="card-img-top" data-description="Bustling commercial centers that combine shopping, dining, and entertainment. These malls house numerous retail stores, restaurants, cinemas, and play areas, making them a one-stop destination for families and friends.">
         <div class="card-body">
             <h4 class="card-title">Complex Malls</h4>
             <p class="card-text">Bustling commercial centers that combine shopping, dining, and entertainment.</p>
@@ -144,7 +146,7 @@
 </div>
 <div class="gallery-item col-md-4">
     <div class="card">
-        <img src="assets/mansion.webp" alt="Image 4" class="card-img-top">
+        <img src="assets/mansion.webp" alt="Image 4" class="card-img-top" data-description=" Grand, luxurious estates offering opulence, peaceful life, and serenity. These mansions feature expansive grounds, exquisite architecture, and state-of-the-art facilities, providing an unmatched living experience for the elite.">
         <div class="card-body">
             <h4 class="card-title">Mansion</h4>
             <p class="card-text">Grand, luxurious estates offering opulence,peaceful life and serenity .</p>
@@ -157,12 +159,9 @@
 
 
 <!-- Modal for Image Popup -->
-<div id="myModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <div class="modal-box">
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-    </div>
+<div id="myModal" class="modal">
+  <div class="modal-content"></div>
+  <span class="close" onclick="closeModal()">&times;</span>
 </div>
 
 <br>
@@ -392,33 +391,45 @@
   
 
 <script>
-  function openModal(img) {
+ function openModal(button) {
     const modal = document.getElementById("myModal");
     const modalContent = modal.querySelector(".modal-content");
-    const captionText = modal.querySelector("#caption");
+    
+    // Get the image element
+    const img = button.parentElement.previousElementSibling;
+    const description = img.getAttribute('data-description');
     
     // Show modal
     modal.style.display = "flex";
     
     // Set image and description
-    modalContent.src = img.src;
-    captionText.innerHTML = img.dataset.description;
-
-    // Add white box for content
-    modalContent.outerHTML = `
+    modalContent.innerHTML = `
         <div class="modal-box">
             <img src="${img.src}" alt="${img.alt}">
-            <div id="caption">${img.dataset.description}</div>
+            <div id="caption">${description}</div>
         </div>`;
 }
-// Toggle function for the hamburger menu
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+
+// Add event listeners to all images to open the modal on click
+const images = document.querySelectorAll('.image-card img');
+images.forEach(img => {
+    img.addEventListener('click', () => openModal(img));
+});
+
+// Function to toggle the hamburger menu
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('open');
 }
-// Add the active class to the clicked link and remove it from others
-const navbarLinks = document.querySelectorAll('.navbar-links li a');
 
+// Add active class to clicked link and remove it from others
+const navbarLinks = document.querySelectorAll('.navbar-links li a');
 navbarLinks.forEach(link => {
     link.addEventListener('click', () => {
         navbarLinks.forEach(link => link.classList.remove('active'));
@@ -426,11 +437,6 @@ navbarLinks.forEach(link => {
     });
 });
 
-
-function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
 const scrollContainer = document.querySelector('.scroll-container');
 const scrollLeft = document.getElementById('scroll-left');
 const scrollRight = document.getElementById('scroll-right');
