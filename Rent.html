@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Project-RE</title>
     <link rel="stylesheet" href="Rentstyle.css">
-    
-    
 </head>
 <body>
 
@@ -22,18 +20,31 @@
             <ul class="navbar-links">
                 <li><a href="index.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
                 <li><a href="about.html" class="nav-link" onclick="highlightLink(event)">About Us</a></li>
-                <li><a href="services.html" class="nav-link" onclick="highlightLink(event)">Services</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Services</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Agents / Brokers</a></li>
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Builders / Developers</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Architects / Architecture</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Interior Decorators</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Vaastu Consultant</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Building Contractors</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Home Inspection</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Property Consultants</a></li>
+                  </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Buy</a></li>
+              <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Rent/PG</a></li>
                 <li class="dropdown">
                     <a href="#" class="nav-link" onclick="toggleDropdown(event)">Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Villa</a></li>
-                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">Apartments</a></li>
-                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Mansion</a></li>
-                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Complex Malls</a></li>
+                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Residence</a></li>
+                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">commercials</a></li>
                     </ul>
                 </li>
+                
                 <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Contact</a></li>
-                <li><a href="newlogin.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
+                <li><a href="login.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
             </ul>
 
             <!-- Hamburger Menu (3 lines) -->
@@ -47,85 +58,19 @@
 </header>
 
 
-<body>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#" onclick="setActive(this)">Buy</a></li>
-            <li><a href="#" class="active" onclick="setActive(this)">Rent</a></li>
-            <li><a href="#" onclick="setActive(this)">PG / Co-living</a></li>
-            <li><a href="#" onclick="setActive(this)">Commercial</a></li>
-            <li><a href="#" onclick="setActive(this)">Plots/Land</a></li>
-            <li><a href="#" onclick="setActive(this)">Projects</a></li>
-        </ul>
-        
-        <div class="search-container">
-            <select class="dropdown">
-                <option value="all-residential">All Residential</option>
-                <option value="apartments">Apartments</option>
-                <option value="villas">Villas</option>
-                <option value="commercial">Commercial</option>
-            </select>
-            <input type="text" class="search-input" placeholder='Search "3 BHK for sale in Mumbai"'>
-            <button class="icon-btn">
-                <i class="fa fa-crosshairs"></i> <!-- FontAwesome Location Icon -->
-            </button>
-            <button class="icon-btn">
-                <i class="fa fa-microphone"></i> <!-- FontAwesome Microphone Icon -->
-            </button>
-            <button class="search-btn">Search</button>
-        </div>
-    </nav>
-    <br>
-
-<div class="image-container">
-  <img src="img/Apartment Building Exterior.jpg" width="1500" height="500">
-  <div class="line"> Rent / Sold</div>
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="overlay">
+      <div class="hero-content">
+        <h1>
+          Find Your Perfect Home<br>
+           <span> To Rent Today!</span> 
+        </h1>
+          <p>Explore top-quality rental properties tailored to your needs. Hassle-free and affordable options to match your lifestyle and budget.</p>
+          <a href="#" class="hero-button">Rent Now</a>
+      </div>
+  </div>
 </div>
-  <div id="moving-boxes-container"></div>
-
-  <script>
-      // JavaScript for dynamic moving boxes
-      function createMovingBoxes() {
-          const container = document.getElementById("moving-boxes-container");
-
-          for (let i = 0; i < 10; i++) { // Create 10 boxes
-              const box = document.createElement("div");
-              box.className = "moving-box";
-
-              // Randomize initial position
-              box.style.left = `${Math.random() * window.innerWidth}px`;
-              box.style.top = `${Math.random() * window.innerHeight}px`;
-
-              // Append to container
-              container.appendChild(box);
-
-              // Animate box movement
-              animateBox(box);
-          }
-      }
-
-      function animateBox(box) {
-          const duration = Math.random() * 5 + 3; // Random duration between 3s and 8s
-
-          box.animate(
-              [
-                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` },
-                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` }
-              ],
-              {
-                  duration: duration * 1000,
-                  iterations: Infinity
-              }
-          );
-      }
-
-      // Call the function on page load
-      window.onload = createMovingBoxes;
-  </script>
-</body>
-
-</body>
-
 
 
 
