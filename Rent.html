@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Project-RE</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Rentstyle.css">
 </head>
 <body>
 
@@ -19,20 +18,33 @@
         <!-- Navbar -->
         <nav class="navbar">
             <ul class="navbar-links">
-                <li><a href="index.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
+                <li><a href="home.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
                 <li><a href="about.html" class="nav-link" onclick="highlightLink(event)">About Us</a></li>
-                <li><a href="services.html" class="nav-link" onclick="highlightLink(event)">Services</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Services</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Agents / Brokers</a></li>
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Builders / Developers</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Architects / Architecture</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Interior Decorators</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Vaastu Consultant</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Building Contractors</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Home Inspection</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Property Consultants</a></li>
+                  </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Buy</a></li>
+              <li><a href="Rent.html" class="nav-link" onclick="highlightLink(event)">Rent/PG</a></li>
                 <li class="dropdown">
                     <a href="#" class="nav-link" onclick="toggleDropdown(event)">Projects</a>
                     <ul class="dropdown-menu">
-                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Villa</a></li>
-                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">Apartments</a></li>
-                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Mansion</a></li>
-                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Complex Malls</a></li>
+                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Residence</a></li>
+                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">commercials</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Contact</a></li>
-                <li><a href="newlogin.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
+                
+                
+                <li><a href="login.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
             </ul>
 
             <!-- Hamburger Menu (3 lines) -->
@@ -46,87 +58,163 @@
 </header>
 
 
-<body>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#" onclick="setActive(this)">Buy</a></li>
-            <li><a href="#" class="active" onclick="setActive(this)">Rent</a></li>
-            <li><a href="#" onclick="setActive(this)">PG / Co-living</a></li>
-            <li><a href="#" onclick="setActive(this)">Commercial</a></li>
-            <li><a href="#" onclick="setActive(this)">Plots/Land</a></li>
-            <li><a href="#" onclick="setActive(this)">Projects</a></li>
-        </ul>
-        
-        <div class="search-container">
-            <select class="dropdown">
-                <option value="all-residential">All Residential</option>
-                <option value="apartments">Apartments</option>
-                <option value="villas">Villas</option>
-                <option value="commercial">Commercial</option>
-            </select>
-            <input type="text" class="search-input" placeholder='Search "3 BHK for sale in Mumbai"'>
-            <button class="icon-btn">
-                <i class="fa fa-crosshairs"></i> <!-- FontAwesome Location Icon -->
-            </button>
-            <button class="icon-btn">
-                <i class="fa fa-microphone"></i> <!-- FontAwesome Microphone Icon -->
-            </button>
-            <button class="search-btn">Search</button>
-        </div>
-    </nav>
-    <br>
-
-<div class="image-container">
-  <img src="img/Apartment Building Exterior.jpg" width="1500" height="500">
-  <div class="line"> Rent / Sold</div>
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="overlay">
+      <div class="hero-content">
+        <h1>
+          Find Your Perfect Home<br>
+           <span> To Rent Today!</span> 
+        </h1>
+          <p>Explore top-quality rental properties tailored to your needs. Hassle-free and affordable options to match your lifestyle and budget.</p>
+          <a href="#" class="hero-button">Rent Now</a>
+      </div>
+  </div>
 </div>
-  <div id="moving-boxes-container"></div>
-
-  <script>
-      // JavaScript for dynamic moving boxes
-      function createMovingBoxes() {
-          const container = document.getElementById("moving-boxes-container");
-
-          for (let i = 0; i < 10; i++) { // Create 10 boxes
-              const box = document.createElement("div");
-              box.className = "moving-box";
-
-              // Randomize initial position
-              box.style.left = `${Math.random() * window.innerWidth}px`;
-              box.style.top = `${Math.random() * window.innerHeight}px`;
-
-              // Append to container
-              container.appendChild(box);
-
-              // Animate box movement
-              animateBox(box);
-          }
-      }
-
-      function animateBox(box) {
-          const duration = Math.random() * 5 + 3; // Random duration between 3s and 8s
-
-          box.animate(
-              [
-                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` },
-                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` }
-              ],
-              {
-                  duration: duration * 1000,
-                  iterations: Infinity
-              }
-          );
-      }
-
-      // Call the function on page load
-      window.onload = createMovingBoxes;
-  </script>
-</body>
-
-</body>
 
 
 
+<!--services-->
+<div class="services-container">
+  <h1>Explore our Real Estate Services</h1>
+  <br>
+  <div class="services-grid">
+      <div class="service-card">
+          <h3>Agents / Brokers</h3>
+          <p>Here Are Hassle-Free Solutions! Buy - Sell - Rent Your Property</p>
+          <a href="#">Read More</a>
+          <img src="assets/agents.png" alt="Agents / Brokers">
+      </div>
+      <div class="service-card">
+          <h3>Builders / Developers</h3>
+          <p>List of the most trusted and reliable builders to fulfill your Dream HOME.</p>
+          <a href="#">Read More</a>
+          <img src="assets/builders.png" alt="Builders / Developers">
+      </div>
+      <div class="service-card">
+          <h3>Architects / Architecture</h3>
+          <p>Professional Architecture will meet your needs and expectations.</p>
+          <a href="#">Read More</a>
+          <img src="assets/architect.png" alt="Architects / Architecture">
+      </div>
+      <div class="service-card">
+          <h3>Interior Decorators</h3>
+          <p>A One-Stop Solution for all your decor Needs to Match Your Lifestyle.</p>
+          <a href="#">Read More</a>
+          <img src="assets/interior.png" alt="Interior Decorators">
+      </div>
+      <div class="service-card">
+          <h3>Vaastu Consultant</h3>
+          <p>Connect to top most Vastu consultants for right direction.</p>
+          <a href="#">Read More</a>
+          <img src="assets/vaasthu.png" alt="Vaastu consultants">
+      </div>
+      <div class="service-card">
+          <h3>Building Contractors</h3>
+          <p>General contractor for a home repair, remodel, or construction.</p>
+          <a href="#">Read More</a>
+          <img src="assets/contracts.png" alt="Building construction">
+      </div>
+      <div class="service-card">
+          <h3>Home Inspection</h3>
+          <p>A complete range of building and home inspection services.</p>
+          <a href="#">Read More</a>
+          <img src="assets/inspection.png" alt="Home inspection">
+      </div>
+      <div class="service-card">
+          <h3>Property Consultants</h3>
+          <p>List of Leading Real Estate Consultant for Professional Assistance Services.</p>
+          <a href="#">Read More</a>
+          <img src="assets/consultants.png" alt="property">
+      </div>
+  </div>
+</div>
+
+
+<!--most viewed-->
+
+<section class="most-viewed-properties">
+  <h2>Most Viewed Properties</h2>
+  <div class="property-list">
+    <div class="property-item">
+      <img src="assets/ready flats.png" alt="Ready to Move Flats">
+      <p>Ready to Move Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/ready house.png" alt="Ready to Move House">
+      <p>Ready to Move House</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/ready floors.png" alt="Ready to Move Builder Floors">
+      <p>Ready to Move Builder Floors</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/farm house.png" alt="Ready to Move Farm House">
+      <p>Ready to Move Farm House</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/affortable.png" alt="Affordable Flats">
+      <p>Affordable Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/low budget.png" alt="Low Budget Flats">
+      <p>Low Budget Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/luxury flats.png" alt="Luxury Flats">
+      <p>Luxury Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/commercial.png" alt="Commercial Properties for Sale">
+      <p>Commercial Properties for Sale</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/plots.png" alt="Freehold Residential Plots">
+      <p>Freehold Residential Plots</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/free flats.png" alt="Freehold Flats">
+      <p>Freehold Flats</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!--insites and tools-->
+<section class="insights-tools">
+  <h2>Insights & Tools</h2>
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="assets/locality.png" alt="Location Icon" class="card-icon">
+      <h3>Coimbatore Top Residential Localities</h3>
+      <p>Planning to buy property in a posh localities in Coimbatore? Here are some of the top locations in Coimbatore .</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="assets/broker.png" alt="Agents Icon" class="card-icon">
+      <h3>Top Agents and Brokers Available</h3>
+      <p>Find details of verified real estate agents in Coimbatore to get an entire range of property listings by top Agent & consultant .</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="assets/updates.png" alt="News Icon" class="card-icon">
+      <h3>Latest Real Estate News, Views & Updates</h3>
+      <p>Stay updated with the latest news on real Estate market, updates on residential & commercial property around your city.</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="assets/leads.png" alt="Leads Icon" class="card-icon">
+      <h3>Generating Real Estate Leads</h3>
+      <p>Acquire 100% authentic real estate leads and effortlessly connect with a large number of customers within a short period.</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+  </div>
+</section>
 
 <!-- Footer Section -->
 <footer>
