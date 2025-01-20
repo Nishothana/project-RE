@@ -199,7 +199,94 @@ body {
   box-sizing: border-box;
 }
 
+/*properities*/
+.property-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
 
+.property-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #A66832;
+}
+
+.property-cards-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.property-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.property-details {
+  padding: 15px;
+}
+
+.property-title {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.property-price {
+  font-size: 1rem;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions .view-number {
+  background-color: #A66832;
+  color: white;
+}
+
+.actions .whatsapp {
+  background-color: #A66832;
+  color: white;
+}
+
+.actions .call {
+  background-color: #A66832;
+  color: white;
+}
+ .actions .call:hover{
+  background-color: #4E3629;
+ }
+
+ .actions .whatsapp:hover{
+  background-color: #4E3629;
+ }
+
+ .actions .view-number:hover{
+  background-color: #4E3629;
+ }
 
 /*Services*/
 .services-container {
