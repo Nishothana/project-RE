@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,3 +199,457 @@
         element.classList.add('active');
     }
 </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Project-RE</title>
+    <link rel="stylesheet" href="Rentstyle.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+       
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="home.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
+                <li><a href="about.html" class="nav-link" onclick="highlightLink(event)">About Us</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Services</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Agents / Brokers</a></li>
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Builders / Developers</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Architects / Architecture</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Interior Decorators</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Vaastu Consultant</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Building Contractors</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Home Inspection</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Property Consultants</a></li>
+                  </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Buy</a></li>
+              <li><a href="Rent.html" class="nav-link" onclick="highlightLink(event)">Rent/PG</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link" onclick="toggleDropdown(event)">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Residence</a></li>
+                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">commercials</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li><a href="login.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
+            </ul>
+
+            <!-- Hamburger Menu (3 lines) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="overlay">
+      <div class="hero-content">
+        <h1>
+          Find Your Perfect Home<br>
+           <span> To Rent Today!</span> 
+        </h1>
+          <p>Explore top-quality rental properties tailored to your needs. Hassle-free and affordable options to match your lifestyle and budget.</p>
+          <a href="#" class="hero-button">Rent Now</a>
+      </div>
+  </div>
+</div>
+
+
+<!--property section-->
+<section class="property-section">
+  <h2>Featured Properties</h2>
+  <div class="property-cards-container">
+    <!-- Property Card 1 -->
+    <div class="property-card">
+      <div class="property-image">
+        <img src="image/Apartment Building Exterior.jpg" alt="Apartment Exterior">
+        <div class="featured-badge">FEATURED</div>
+        <div class="more-images">+5 more</div>
+      </div>
+      <div class="property-details">
+        <div class="contact-info">
+          <span>2 people already contacted this week</span>
+        </div>
+        <h2 class="property-title">SKYLINE RESIDENCY</h2>
+        <p class="property-type">Resale</p>
+        <h3 class="property-description">3 BHK Flat in , Ondipdur,Coimbatore</h3>
+        <p class="property-price">₹83.37 Lac <span>₹7,000/sqft</span></p>
+        <p class="property-area">1,191 sqft (111 sqm)</p>
+        <p class="property-status">Under Construction</p>
+        <div class="highlights">
+          <span>Highlights:</span>
+          <span class="highlight">East Facing</span>
+          <span class="highlight">Gated Society</span>
+        </div>
+        <p class="location">900 meters from Ondipudur, Coimbatore</p>
+        <div class="actions">
+          <button class="view-number">View Number</button>
+          <button class="whatsapp">WhatsApp</button>
+          <button class="call">Call</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more property cards (5 in total) -->
+    <!-- Property Card 2 -->
+    <div class="property-card">
+      <div class="property-image">
+        <img src="image/image1.jpg" alt="Property Image">
+        <div class="featured-badge">FEATURED</div>
+        <div class="more-images">+4 more</div>
+      </div>
+      <div class="property-details">
+        <div class="contact-info">
+          <span>5 people already contacted this week</span>
+        </div>
+        <h2 class="property-title">SKYLINE RESIDENCY</h2>
+        <p class="property-type">New Launch</p>
+        <h3 class="property-description">3 BHK Flat in Vadavalli, Coimbatore</h3>
+        <p class="property-price">₹95.45 Lac <span>₹8,000/sqft</span></p>
+        <p class="property-area">1,300 sqft (121 sqm)</p>
+        <p class="property-status">Ready to Move</p>
+        <div class="highlights">
+          <span>Highlights:</span>
+          <span class="highlight">Prime Location</span>
+          <span class="highlight">Parking Included</span>
+        </div>
+        <p class="location">1 km from Vadavalli, Coimbatore</p>
+        <div class="actions">
+          <button class="view-number">View Number</button>
+          <button class="whatsapp">WhatsApp</button>
+          <button class="call">Call</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more cards for a total of 5 -->
+    <!-- Duplicate and modify cards 3, 4, and 5 similarly -->
+    <!-- Property Card 3 -->
+    <div class="property-card">
+      <!-- Content similar to other cards -->
+      <div class="property-image">
+        <img src="image/image1.jpg" alt="Property Image">
+        <div class="featured-badge">FEATURED</div>
+        <div class="more-images">+2 more</div>
+      </div>
+      <div class="property-details">
+        <div class="contact-info">
+          <span>6 people already contacted this week</span>
+        </div>
+        <h2 class="property-title">SKYLINE RESIDENCY</h2>
+        <p class="property-type">New Launch</p>
+        <h3 class="property-description">2 BHK Flat in Vadavalli, Coimbatore</h3>
+        <p class="property-price">₹80.45 Lac <span>₹7,000/sqft</span></p>
+        <p class="property-area">1,050 sqft (93 sqm)</p>
+        <p class="property-status">Under Construction</p>
+        <div class="highlights">
+          <span>Highlights:</span>
+          <span class="highlight">Near Prime Location</span>
+          <span class="highlight">Parking Included</span>
+        </div>
+        <p class="location">5 km from Vadavalli, Coimbatore</p>
+        <div class="actions">
+          <button class="view-number">View Number</button>
+          <button class="whatsapp">WhatsApp</button>
+          <button class="call">Call</button>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 4 -->
+    <div class="property-card">
+      <!-- Content similar to other cards -->
+      <div class="property-image">
+        <img src="image/image1.jpg" alt="Property Image">
+        <div class="featured-badge">FEATURED</div>
+        <div class="more-images">+6 more</div>
+      </div>
+      <div class="property-details">
+        <div class="contact-info">
+          <span>5 people already contacted this week</span>
+        </div>
+        <h2 class="property-title">SKYLINE RESIDENCY</h2>
+        <p class="property-type">New Launch</p>
+        <h3 class="property-description">3 BHK Flat in Vadavalli, Coimbatore</h3>
+        <p class="property-price">₹95.45 Lac <span>₹8,000/sqft</span></p>
+        <p class="property-area">1,300 sqft (121 sqm)</p>
+        <p class="property-status">Ready to Move</p>
+        <div class="highlights">
+          <span>Highlights:</span>
+          <span class="highlight">Prime Location</span>
+          <span class="highlight">Parking Included</span>
+        </div>
+        <p class="location">1 km from Vadavalli, Coimbatore</p>
+        <div class="actions">
+          <button class="view-number">View Number</button>
+          <button class="whatsapp">WhatsApp</button>
+          <button class="call">Call</button>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 5 -->
+    <div class="property-card">
+      <!-- Content similar to other cards -->
+      <div class="property-image">
+        <img src="image/image1.jpg" alt="Property Image">
+        <div class="featured-badge">FEATURED</div>
+        <div class="more-images">+6 more</div>
+      </div>
+      <div class="property-details">
+        <div class="contact-info">
+          <span>5 people already contacted this week</span>
+        </div>
+        <h2 class="property-title">SKYLINE RESIDENCY</h2>
+        <p class="property-type">New Launch</p>
+        <h3 class="property-description">3 BHK Flat in Vadavalli, Coimbatore</h3>
+        <p class="property-price">₹95.45 Lac <span>₹8,000/sqft</span></p>
+        <p class="property-area">1,300 sqft (121 sqm)</p>
+        <p class="property-status">Ready to Move</p>
+        <div class="highlights">
+          <span>Highlights:</span>
+          <span class="highlight">Prime Location</span>
+          <span class="highlight">Parking Included</span>
+        </div>
+        <p class="location">1 km from Vadavalli, Coimbatore</p>
+        <div class="actions">
+          <button class="view-number">View Number</button>
+          <button class="whatsapp">WhatsApp</button>
+          <button class="call">Call</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--services-->
+<div class="services-container">
+  <h1>Explore our Real Estate Services</h1>
+  <br>
+  <div class="services-grid">
+      <div class="service-card">
+          <h3>Agents / Brokers</h3>
+          <p>Here Are Hassle-Free Solutions! Buy - Sell - Rent Your Property</p>
+          <a href="#">Read More</a>
+          <img src="assets/agents.png" alt="Agents / Brokers">
+      </div>
+      <div class="service-card">
+          <h3>Builders / Developers</h3>
+          <p>List of the most trusted and reliable builders to fulfill your Dream HOME.</p>
+          <a href="#">Read More</a>
+          <img src="assets/builders.png" alt="Builders / Developers">
+      </div>
+      <div class="service-card">
+          <h3>Architects / Architecture</h3>
+          <p>Professional Architecture will meet your needs and expectations.</p>
+          <a href="#">Read More</a>
+          <img src="assets/architect.png" alt="Architects / Architecture">
+      </div>
+      <div class="service-card">
+          <h3>Interior Decorators</h3>
+          <p>A One-Stop Solution for all your decor Needs to Match Your Lifestyle.</p>
+          <a href="#">Read More</a>
+          <img src="assets/interior.png" alt="Interior Decorators">
+      </div>
+      <div class="service-card">
+          <h3>Vaastu Consultant</h3>
+          <p>Connect to top most Vastu consultants for right direction.</p>
+          <a href="#">Read More</a>
+          <img src="assets/vaasthu.png" alt="Vaastu consultants">
+      </div>
+      <div class="service-card">
+          <h3>Building Contractors</h3>
+          <p>General contractor for a home repair, remodel, or construction.</p>
+          <a href="#">Read More</a>
+          <img src="assets/contracts.png" alt="Building construction">
+      </div>
+      <div class="service-card">
+          <h3>Home Inspection</h3>
+          <p>A complete range of building and home inspection services.</p>
+          <a href="#">Read More</a>
+          <img src="assets/inspection.png" alt="Home inspection">
+      </div>
+      <div class="service-card">
+          <h3>Property Consultants</h3>
+          <p>List of Leading Real Estate Consultant for Professional Assistance Services.</p>
+          <a href="#">Read More</a>
+          <img src="assets/consultants.png" alt="property">
+      </div>
+  </div>
+</div>
+
+
+<!--most viewed-->
+
+<section class="most-viewed-properties">
+  <h2>Most Viewed Properties</h2>
+  <div class="property-list">
+    <div class="property-item">
+      <img src="assets/readyflats.png" alt="Ready to Move Flats">
+      <p>Ready to Move Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/readyhouse.png" alt="Ready to Move House">
+      <p>Ready to Move House</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/readyfloors.png" alt="Ready to Move Builder Floors">
+      <p>Ready to Move Builder Floors</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/farmhouse.png" alt="Ready to Move Farm House">
+      <p>Ready to Move Farm House</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/affortable.png" alt="Affordable Flats">
+      <p>Affordable Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/lowbudget.png" alt="Low Budget Flats">
+      <p>Low Budget Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/luxuryflats.png" alt="Luxury Flats">
+      <p>Luxury Flats</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/commercial.png" alt="Commercial Properties for Sale">
+      <p>Commercial Properties for Sale</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/plots.png" alt="Freehold Residential Plots">
+      <p>Freehold Residential Plots</p>
+    </div>
+    <div class="property-item">
+      <img src="assets/freeflats.png" alt="Freehold Flats">
+      <p>Freehold Flats</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!--insites and tools-->
+<section class="insights-tools">
+  <h2>Insights & Tools</h2>
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="assets/locality.png" alt="Location Icon" class="card-icon">
+      <h3>Coimbatore Top Residential Localities</h3>
+      <p>Planning to buy property in a posh localities in Coimbatore? Here are some of the top locations in Coimbatore .</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="assets/broker.png" alt="Agents Icon" class="card-icon">
+      <h3>Top Agents and Brokers Available</h3>
+      <p>Find details of verified real estate agents in Coimbatore to get an entire range of property listings by top Agent & consultant .</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="assets/updates.png" alt="News Icon" class="card-icon">
+      <h3>Latest Real Estate News, Views & Updates</h3>
+      <p>Stay updated with the latest news on real Estate market, updates on residential & commercial property around your city.</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="assets/leads.png" alt="Leads Icon" class="card-icon">
+      <h3>Generating Real Estate Leads</h3>
+      <p>Acquire 100% authentic real estate leads and effortlessly connect with a large number of customers within a short period.</p>
+      <button>Explore Now <span>➔</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <!-- Company Information Section -->
+      <div class="footer-section company-info">
+        <h4>SHANMUGAM ASSOCIATES</h4>
+        <p>NO.5, MARIAMMAN KOVIL STREET,</p>
+        <p>VADAVALLI, COIMBATORE-641 046</p>
+        <p><strong>Phone:</strong> +91 9443522285</p>
+        <p><strong>Email:</strong> <a href="mailto:associatesshanmugam@gmail.com">associatesshanmugam@gmail.com</a></p>
+      </div>
+  
+      <!-- Useful Links Section -->
+      <div class="footer-section useful-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services Section -->
+      <div class="footer-section services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Villa</a></li>
+          <li><a href="#">High Rise Building</a></li>
+          <li><a href="#">Painting</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+      <div class="newsletter-section">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Monthly digest of what's new and exciting from us.</p>
+        <form>
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© Copyright SHANMUGAM ASSOCIATES. All Rights Reserved.</p>
+      <p>Designed by <a href="#">newway</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    function setActive(element) {
+        // Remove the 'active' class from all links
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add the 'active' class to the clicked link
+        element.classList.add('active');
+    }
+</script>
+>>>>>>> 4c68a7526c6edb970d46850e6c9159f9733d7cf6
