@@ -1,3 +1,205 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Project-RE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+       
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
+                <li><a href="about.html" class="nav-link" onclick="highlightLink(event)">About Us</a></li>
+                <li><a href="services.html" class="nav-link" onclick="highlightLink(event)">Services</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link" onclick="toggleDropdown(event)">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Villa</a></li>
+                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">Apartments</a></li>
+                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Mansion</a></li>
+                        <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Complex Malls</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Contact</a></li>
+                <li><a href="newlogin.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
+            </ul>
+
+            <!-- Hamburger Menu (3 lines) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#" onclick="setActive(this)">Buy</a></li>
+            <li><a href="#" class="active" onclick="setActive(this)">Rent</a></li>
+            <li><a href="#" onclick="setActive(this)">PG / Co-living</a></li>
+            <li><a href="#" onclick="setActive(this)">Commercial</a></li>
+            <li><a href="#" onclick="setActive(this)">Plots/Land</a></li>
+            <li><a href="#" onclick="setActive(this)">Projects</a></li>
+        </ul>
+        
+        <div class="search-container">
+            <select class="dropdown">
+                <option value="all-residential">All Residential</option>
+                <option value="apartments">Apartments</option>
+                <option value="villas">Villas</option>
+                <option value="commercial">Commercial</option>
+            </select>
+            <input type="text" class="search-input" placeholder='Search "3 BHK for sale in Mumbai"'>
+            <button class="icon-btn">
+                <i class="fa fa-crosshairs"></i> <!-- FontAwesome Location Icon -->
+            </button>
+            <button class="icon-btn">
+                <i class="fa fa-microphone"></i> <!-- FontAwesome Microphone Icon -->
+            </button>
+            <button class="search-btn">Search</button>
+        </div>
+    </nav>
+    <br>
+
+<div class="image-container">
+  <img src="img/Apartment Building Exterior.jpg" width="1500" height="500">
+  <div class="line"> Rent / Sold</div>
+</div>
+  <div id="moving-boxes-container"></div>
+
+  <script>
+      // JavaScript for dynamic moving boxes
+      function createMovingBoxes() {
+          const container = document.getElementById("moving-boxes-container");
+
+          for (let i = 0; i < 10; i++) { // Create 10 boxes
+              const box = document.createElement("div");
+              box.className = "moving-box";
+
+              // Randomize initial position
+              box.style.left = `${Math.random() * window.innerWidth}px`;
+              box.style.top = `${Math.random() * window.innerHeight}px`;
+
+              // Append to container
+              container.appendChild(box);
+
+              // Animate box movement
+              animateBox(box);
+          }
+      }
+
+      function animateBox(box) {
+          const duration = Math.random() * 5 + 3; // Random duration between 3s and 8s
+
+          box.animate(
+              [
+                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` },
+                  { transform: `translate(${Math.random() * window.innerWidth}px, ${Math.random() * window.innerHeight}px)` }
+              ],
+              {
+                  duration: duration * 1000,
+                  iterations: Infinity
+              }
+          );
+      }
+
+      // Call the function on page load
+      window.onload = createMovingBoxes;
+  </script>
+</body>
+
+</body>
+
+
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <!-- Company Information Section -->
+      <div class="footer-section company-info">
+        <h4>SHANMUGAM ASSOCIATES</h4>
+        <p>NO.5, MARIAMMAN KOVIL STREET,</p>
+        <p>VADAVALLI, COIMBATORE-641 046</p>
+        <p><strong>Phone:</strong> +91 9443522285</p>
+        <p><strong>Email:</strong> <a href="mailto:associatesshanmugam@gmail.com">associatesshanmugam@gmail.com</a></p>
+      </div>
+  
+      <!-- Useful Links Section -->
+      <div class="footer-section useful-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services Section -->
+      <div class="footer-section services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Villa</a></li>
+          <li><a href="#">High Rise Building</a></li>
+          <li><a href="#">Painting</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+      <div class="newsletter-section">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Monthly digest of what's new and exciting from us.</p>
+        <form>
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© Copyright SHANMUGAM ASSOCIATES. All Rights Reserved.</p>
+      <p>Designed by <a href="#">newway</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    function setActive(element) {
+        // Remove the 'active' class from all links
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add the 'active' class to the clicked link
+        element.classList.add('active');
+    }
+</script>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -450,3 +652,4 @@
         element.classList.add('active');
     }
 </script>
+>>>>>>> 4c68a7526c6edb970d46850e6c9159f9733d7cf6
