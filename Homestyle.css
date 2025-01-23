@@ -726,10 +726,9 @@ body {
 .metric-item:hover {
   transform: translateY(-8px); /* Slight hover effect */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.metric-item h3 :hover{
   color: #512a09;
 }
+
 
 
 /*Footer*/
