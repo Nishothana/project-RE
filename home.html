@@ -66,6 +66,43 @@
     </div>
 </div>
 
+
+
+
+
+
+<!--about us-->
+<!--About us-->
+
+<section class="about-us">
+  <div class="container">
+    <div class="content">
+      <h2>Our Story</h2>
+      <p>
+        Founded in 1985, Urban Realty Group has been at the forefront of innovative real estate solutions. With a commitment to excellence, we have grown into a trusted name in property development, management, and investment.
+      </p>
+      <ul class="highlights">
+        <li>
+          <span class="icon">✔</span>
+          Our team consists of experienced professionals driven by a shared passion for excellence.
+        </li>
+        <li>
+          <span class="icon">✔</span>
+          We build long-lasting relationships by understanding and exceeding client expectations.
+        </li>
+        <li>
+          <span class="icon">✔</span>
+          Innovation and sustainability are at the heart of everything we do.
+        </li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="assets/aboutus.webp" alt="Company Building" />
+    </div>
+  </div>
+</section>
+
+
 <!-- Gallery Section -->
 <div class="gallery row">
   <div class="gallery-item col-md-4">
@@ -327,46 +364,45 @@
 
 <br>
 
-
+<!--overview section-->
 <div class="overview-container">
   <div class="container">
     <section class="overview-section">
       <h2>An Overview of the Coimbatore Real Estate Market</h2>
       <p>
-        Nestled in the heart of Tamil Nadu, Coimbatore is renowned as the "Manchester of South India." 
-        Its booming textile industry, coupled with a rapidly expanding real estate sector, makes it a prime location for investments. 
-        The city's seamless blend of modern infrastructure and traditional values ensures an unparalleled living experience for residents.
+        Coimbatore, the "Manchester of South India," is rapidly transforming into a hub for real estate investments. 
+        The city's flourishing textile industry and modern infrastructure make it a sought-after destination. 
+        With a harmonious blend of tradition and modernity, Coimbatore offers an exceptional living experience.
       </p>
       <div class="metrics">
         <div class="metric-item">
-          <h3>200+</h3>
+          <h3><span class="count" data-target="200">0</span>+</h3>
           <p>Ready to Move Flats in Coimbatore</p>
         </div>
         <div class="metric-item">
-          <h3>150+</h3>
+          <h3><span class="count" data-target="150">0</span>+</h3>
           <p>Ready to Move Houses in Coimbatore</p>
         </div>
         <div class="metric-item">
-          <h3>20+</h3>
-          <p>Ready to Move Builder Floors</p>
-        </div>
-        <div class="metric-item">
-          <h3>50+</h3>
+          <h3><span class="count" data-target="50">0</span>+</h3>
           <p>Ready to Move Farm Houses</p>
         </div>
         <div class="metric-item">
-          <h3>1200+</h3>
+          <h3><span class="count" data-target="1200">0</span>+</h3>
           <p>Properties for Rent in Coimbatore</p>
         </div>
         <div class="metric-item">
-          <h3>400+</h3>
+          <h3><span class="count" data-target="400">0</span>+</h3>
           <p>Residential Projects in Coimbatore</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
 </div>
+
+
+<br>
+
 
 
 <!-- Footer Section -->
@@ -486,6 +522,29 @@ scrollLeft.addEventListener('click', () => {
 scrollRight.addEventListener('click', () => {
   scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
 });
+
+
+// Select all elements with the class "count"
+const counters = document.querySelectorAll('.count');
+
+// Define the counting function
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target'); // Get the target number
+    const current = +counter.innerText; // Get the current displayed number
+    const increment = Math.max(target / 100, 1); // Increment step (ensures it's at least 1)
+
+    if (current < target) {
+      counter.innerText = Math.ceil(current + increment); // Incrementally update
+      setTimeout(updateCount, 20); // Repeat every 20ms
+    } else {
+      counter.innerText = target; // Ensure it stops at the target value
+    }
+  };
+
+  updateCount(); // Start counting
+});
+
 
 
 </script>
