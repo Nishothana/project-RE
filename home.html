@@ -368,12 +368,26 @@
 <div class="overview-container">
   <div class="container">
     <section class="overview-section">
-      <h2>An Overview of the Coimbatore Real Estate Market</h2>
-      <p>
-        Coimbatore, the "Manchester of South India," is rapidly transforming into a hub for real estate investments. 
-        The city's flourishing textile industry and modern infrastructure make it a sought-after destination. 
-        With a harmonious blend of tradition and modernity, Coimbatore offers an exceptional living experience.
-      </p>
+      <div class="content-wrapper">
+        <!-- Image on the left -->
+        <div class="image-container">
+          <img src="assets/aboutus.avif" alt="Coimbatore Real Estate" />
+        </div>
+        <!-- Title and Paragraph on the right -->
+        <div class="text-container">
+          <h2>An Overview of the Coimbatore Real Estate Market</h2>
+          <p>
+            At the heart of Coimbatore's vibrant real estate market, we are a team of dedicated professionals 
+            committed to making your property journey seamless and rewarding. With years of expertise and a deep 
+            understanding of the region, we offer tailored solutions for buying, selling, or renting properties. 
+            Whether you're a first-time buyer, an investor, or looking for your dream home, our mission is to deliver
+             unmatched service and insights to help you make informed decisions. Trust, transparency, and customer 
+             satisfaction are the cornerstones of our work.
+          </p>
+        </div>
+      </div>
+
+      <!-- Metrics Section -->
       <div class="metrics">
         <div class="metric-item">
           <h3><span class="count" data-target="200">0</span>+</h3>
@@ -395,10 +409,15 @@
           <h3><span class="count" data-target="400">0</span>+</h3>
           <p>Residential Projects in Coimbatore</p>
         </div>
+        <div class="metric-item">
+          <h3><span class="count" data-target="300">0</span>+</h3>
+          <p>Upcoming Projects in Coimbatore</p>
+        </div>
       </div>
     </section>
   </div>
 </div>
+
 
 
 <br>
@@ -524,27 +543,42 @@ scrollRight.addEventListener('click', () => {
 });
 
 
-// Select all elements with the class "count"
-const counters = document.querySelectorAll('.count');
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all elements with the 'count' class
+  const counters = document.querySelectorAll(".count");
 
-// Define the counting function
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target'); // Get the target number
-    const current = +counter.innerText; // Get the current displayed number
-    const increment = Math.max(target / 100, 1); // Increment step (ensures it's at least 1)
+  // Function to animate counting
+  const animateCount = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const increment = Math.ceil(target / 200); // Adjust speed
+    let current = 0;
 
-    if (current < target) {
-      counter.innerText = Math.ceil(current + increment); // Incrementally update
-      setTimeout(updateCount, 20); // Repeat every 20ms
-    } else {
-      counter.innerText = target; // Ensure it stops at the target value
-    }
+    const updateCounter = () => {
+      if (current < target) {
+        current += increment;
+        counter.textContent = current > target ? target : current;
+        setTimeout(updateCounter, 10); // Adjust speed
+      }
+    };
+    updateCounter();
   };
 
-  updateCount(); // Start counting
-});
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target); // Start counting when visible
+          observer.unobserve(entry.target); // Stop observing after counting
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% of the section is visible
+  );
 
+  // Observe each counter
+  counters.forEach((counter) => observer.observe(counter));
+});
 
 
 </script>
