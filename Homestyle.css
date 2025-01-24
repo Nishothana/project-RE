@@ -742,6 +742,70 @@ body {
 
 
 
+/*feedback*/
+
+.feedback-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.feedback-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #A66832;
+}
+
+.feedback-slider {
+  position: relative;
+  width: 60%; /* Reduced the width */
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(184, 117, 41, 0.313);
+}
+
+.feedback-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.feedback {
+  flex: 1 0 100%;
+  padding: 20px; /* Reduced padding */
+  text-align: left;
+}
+
+.feedback img {
+  max-width: 80px; /* Reduced image size */
+  margin-bottom: 10px;
+}
+
+.feedback h3 {
+  font-size: 1.6rem; /* Reduced font size */
+  margin: 8px 0;
+  color: #013220;
+}
+
+.feedback p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.feedback .stars {
+  color: #ffc107;
+  margin: 20px 8px;
+  size: 5px;
+}
+
+/* Specific styles for the 4th and 5th feedback boxes */
+.feedback:nth-child(4),
+.feedback:nth-child(5) {
+  padding-right: 50px; /* Shifted content to the right */
+}
+
+
 /*Footer*/
 body {
     font-family: Arial, sans-serif;
