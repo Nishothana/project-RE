@@ -664,47 +664,58 @@ body {
 
 
 
-/*overview section*/
-
+/* Overview Section */
 .overview-container {
   background-color: #f9f9f9;
   padding: 60px 0;
 }
 
-.overview-section {
-  text-align: center;
-  margin: auto;
-  max-width: 900px;
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Space between image and text */
+  margin-bottom: 50px;
 }
 
-.overview-section h2 {
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width for the image */
+}
+
+.text-container {
+  max-width: 600px;
+  text-align: left;
+}
+
+.text-container h2 {
   font-size: 32px;
   color: #A66832;
   margin-bottom: 20px;
 }
 
-
-.overview-section p {
+.text-container p {
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.8;
   color: #555;
-  margin-bottom: 50px;
 }
 
+/* Metrics Section */
 .metrics {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; /* Increased gap between items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* Space between cards */
+  margin-top: 30px;
 }
 
 .metric-item {
   background-color: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #A66832;
   border-radius: 12px;
-  padding: 20px 10px; /* Increased padding for spaciousness */
-  width: 150px; /* Slightly wider */
-  height: 180px; /* Increased height for more spacing */
+  padding: 20px 10px;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -713,7 +724,7 @@ body {
 .metric-item h3 {
   font-size: 2.5rem;
   color: #A66832;
-  margin-bottom: 15px; /* Spacing under the number */
+  margin-bottom: 15px;
 }
 
 .metric-item p {
@@ -724,8 +735,8 @@ body {
 }
 
 .metric-item:hover {
-  transform: translateY(-8px); /* Slight hover effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(192, 118, 61, 0.374);
   color: #512a09;
 }
 
