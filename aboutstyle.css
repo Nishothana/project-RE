@@ -191,15 +191,9 @@
     color: #A66832;
   }
   
-  /* General Styling */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  
+
+ /*feedback*/
+
 .feedback-section {
     text-align: center;
     padding: 50px 20px;
@@ -213,48 +207,53 @@
 
 .feedback-slider {
     position: relative;
-    width: 80%;
+    width: 60%; /* Reduced the width */
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid #A66832;
-    background-color: #a6683218;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(184, 117, 41, 0.313);
 }
 
 .feedback-wrapper {
     display: flex;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .feedback {
     flex: 1 0 100%;
-    padding: 30px;
+    padding: 20px; /* Reduced padding */
     text-align: left;
 }
 
 .feedback img {
-    max-width: 100px;
-    margin-bottom: 15px;
+    max-width: 80px; /* Reduced image size */
+    margin-bottom: 10px;
 }
 
 .feedback h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
+    font-size: 1.6rem; /* Reduced font size */
+    margin: 8px 0;
     color: #013220;
 }
 
 .feedback p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
     color: #666;
 }
 
 .feedback .stars {
     color: #ffc107;
-    margin: 10px 0;
+    margin: 20px 8px;
+    size: 5px;
 }
 
+/* Specific styles for the 4th and 5th feedback boxes */
+.feedback:nth-child(4),
+.feedback:nth-child(5) {
+    padding-right: 50px; /* Shifted content to the right */
+}
 
 /*Footer*/
 body {
