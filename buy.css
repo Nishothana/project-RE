@@ -134,7 +134,7 @@
 .hero-section {
     position: relative;
     height: 100vh;
-    background-image: url('assets/r-architecture-2gDwlIim3Uw-unsplash.jpg'); 
+    background-image: url('assets/image13.avif'); 
     background-size: cover; 
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -341,6 +341,101 @@
   background-color:#512a09 ;
 }
 
+
+/* commitments*/
+#caption {
+  text-align: center;
+  color: white; /* White text for description */
+  margin-top: 10px;
+}
+.scrollable-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.scrollable-section h2 {
+  font-size: 32px;
+  color: #A66832;
+  margin-bottom: 20px;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 4px;
+}
+
+.carde {
+  flex: 0 0 300px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(246, 131, 43, 0.543);
+  text-align: left;
+}
+
+.carde h3 {
+  font-size: 16px;
+  color: #A66832;
+  margin-bottom: 10px;
+}
+
+.carde h4 {
+  font-size: 20px;
+  color: #013220;
+  margin-bottom: 10px;
+}
+
+.carde p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.carde a {
+  color: #A66832;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.carde a:hover {
+  text-decoration: underline;
+}
+.scroll-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.scroll-buttons button {
+  background-color:#A66832;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.scroll-buttons button:hover {
+  background-color: #A66832;
+}
 
 /*Footer*/
 body {
