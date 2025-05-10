@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Project-RE</title>
+    <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+       
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="home.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
+                <li><a href="about.html" class="nav-link" onclick="highlightLink(event)">About Us</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Services</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Agents / Brokers</a></li>
+                      <li><a href="" class="nav-link" onclick="highlightLink(event)">Builders / Developers</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Architects / Architecture</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Interior Decorators</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Vaastu Consultant</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Building Contractors</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Home Inspection</a></li>
+                      <li><a href="epoxy.html" class="nav-link" onclick="highlightLink(event)">Property Consultants</a></li>
+                  </ul>
+              </li>
+              <li><a href="buy.html" class="nav-link" onclick="highlightLink(event)">Buy</a></li>
+              <li><a href="Rent.html" class="nav-link" onclick="highlightLink(event)">Rent/PG</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link" onclick="toggleDropdown(event)">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="villa.html" class="nav-link" onclick="highlightLink(event)">Residence</a></li>
+                        <li><a href="painting.html" class="nav-link" onclick="highlightLink(event)">commercials</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li><a href="login.html" class="nav-link">Login <i class="fa fa-sign-in" style="font-size: 20px; margin-left: 20px;"></i></a></li>
+            </ul>
+
+            <!-- Hamburger Menu (3 lines) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="overlay">
+        <div class="hero-content">
+            
+          <h1>
+            Unlock the door to your future<br>
+             <span> Own it Today!</span> 
+          </h1>
+            <p>Home is where the story begins.Write your own story with your love, hope and built with your memories.Spend time with your family in your own house.</p>
+            <a href="#" class="hero-button">Buy Now</a>
+        </div>
+    </div>
+  </div>
+  <br>
+  <br>
+<div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="card-img">
+            <img src="assets/image2.avif" alt="2 BHK Flat Image">
+        </div>
+        <div class="card-details">
+            <h3>2 BHK Flat for Sale in Tata Bad, Coimbatore</h3>
+            <p class="super-area">Super Area: 925 sqft</p>
+            <p>Status: Ready to Move</p>
+            <p>Floor: 2 out of 4</p>
+            <p class="price">₹55 Lac</p>
+            <div class="actions">
+                <button>Contact Owner</button>
+                <button>Get Phone No.</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="card-img">
+            <img src="assets/image1.avif" alt="4 BHK Flat Image">
+        </div>
+        <div class="card-details">
+            <h3>4 BHK Flat for Sale in GV Residency, Coimbatore</h3>
+            <p class="super-area">Carpet Area: 2410 sqft</p>
+            <p>Status: Ready to Move</p>
+            <p>Floor: 5 out of 7</p>
+            <p class="price">₹2.20 Cr</p>
+            <div class="actions">
+                <button>Contact Owner</button>
+                <button>Get Phone No.</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="card-img">
+            <img src="assets/image6.avif"  alt="3 BHK Flat Image">
+        </div>
+        <div class="card-details">
+            <h3>3 BHK Flat for Sale in Puliyakulam, Coimbatore</h3>
+            <p class="super-area">Super Area: 1800 sqft</p>
+            <p>Status: Ready to Move</p>
+            <p>Floor: 3 out of 5</p>
+            <p class="price">₹1.50 Cr</p>
+            <div class="actions">
+                <button>Contact Owner</button>
+                <button>Get Phone No.</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Card 4 -->
+<div class="card">
+    <div class="card-img">
+        <img src="assets/image4.avif" alt="1 BHK Flat Image">
+    </div>
+    <div class="card-details">
+        <h3>1 BHK Flat for Sale in Race Course, Coimbatore</h3>
+        <p class="super-area">Super Area: 650 sqft</p>
+        <p>Status: Ready to Move</p>
+        <p>Floor: 1 out of 3</p>
+        <p class="price">₹45 Lac</p>
+        <div class="actions">
+            <button>Contact Owner</button>
+            <button>Get Phone No.</button>
+        </div>
+    </div>
+</div>
+
+<!-- Card 5 -->
+<div class="card">
+    <div class="card-img">
+        <img src="assets/image5.avif" alt="2 BHK Flat Image">
+    </div>
+    <div class="card-details">
+        <h3>2 BHK Flat for Sale in Saravanampatti, Coimbatore</h3>
+        <p class="super-area">Super Area: 1100 sqft</p>
+        <p>Status: Ready to Move</p>
+        <p>Floor: 2 out of 5</p>
+        <p class="price">₹70 Lac</p>
+        <div class="actions">
+            <button>Contact Owner</button>
+            <button>Get Phone No.</button>
+        </div>
+    </div>
+</div>
+
+<!-- Card 6 -->
+<div class="card">
+    <div class="card-img">
+        <img src="assets/image7.avif" alt="4 BHK Flat Image">
+    </div>
+    <div class="card-details">
+        <h3>4 BHK Flat for Sale in RS Puram, Coimbatore</h3>
+        <p class="super-area">Super Area: 3000 sqft</p>
+        <p>Status: Ready to Move</p>
+        <p>Floor: 4 out of 8</p>
+        <p class="price">₹2.80 Cr</p>
+        <div class="actions">
+            <button>Contact Owner</button>
+            <button>Get Phone No.</button>
+        </div>
+    </div>
+</div>
+
+<!-- Card 7 -->
+<div class="card">
+    <div class="card-img">
+        <img src="assets/image8.avif" alt="3 BHK Flat Image">
+    </div>
+    <div class="card-details">
+        <h3>3 BHK Flat for Sale in Saibaba Colony, Coimbatore</h3>
+        <p class="super-area">Super Area: 1500 sqft</p>
+        <p>Status: Ready to Move</p>
+        <p>Floor: 2 out of 6</p>
+        <p class="price">₹1.10 Cr</p>
+        <div class="actions">
+            <button>Contact Owner</button>
+            <button>Get Phone No.</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--Insights and tools-->
+<section class="insights-tools">
+    <h2>Insights & Tools</h2>
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="cards">
+        <img src="assets/locality.png" alt="Location Icon" class="card-icon">
+        <h3>Coimbatore Top Residential Localities</h3>
+        <p>Planning to buy property in a posh localities in Coimbatore? Here are some of the top locations in Coimbatore .</p>
+        <button>Explore Now <span>➔</span></button>
+      </div>
+      <!-- Card 2 -->
+      <div class="cards">
+        <img src="assets/broker.png" alt="Agents Icon" class="card-icon">
+        <h3>Top Agents and Brokers Available</h3>
+        <p>Find details of verified real estate agents in Coimbatore to get an entire range of property listings by top Agent & consultant .</p>
+        <button>Explore Now <span>➔</span></button>
+      </div>
+      <!-- Card 3 -->
+      <div class="cards">
+        <img src="assets/updates.png" alt="News Icon" class="card-icon">
+        <h3>Latest Real Estate News, Views & Updates</h3>
+        <p>Stay updated with the latest news on real Estate market, updates on residential & commercial property around your city.</p>
+        <button>Explore Now <span>➔</span></button>
+      </div>
+      <!-- Card 4 -->
+      <div class="cards">
+        <img src="assets/leads.png" alt="Leads Icon" class="card-icon">
+        <h3>Generating Real Estate Leads</h3>
+        <p>Acquire 100% authentic real estate leads and effortlessly connect with a large number of customers within a short period.</p>
+        <button>Explore Now <span>➔</span></button>
+      </div>
+    </div>
+  </section>
+
+<!--our commitments-->
+<section class="scrollable-section">
+    <h2>Our Commitment</h2>
+    <div class="scroll-container">
+      <div class="carde">
+        <h3>1/4</h3>
+        <h4>Our Story</h4>
+        <p>We bring the diverse knowledge of our people, clients, and partners to realize potential in every business and every person.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="carde">
+        <h3>2/4</h3>
+        <h4>Corporate Responsibility</h4>
+        <p>We take great pride in our reputation for upholding the highest standards in the way we do business.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="carde">
+        <h3>3/4</h3>
+        <h4>Sustainability</h4>
+        <p>Minimizing the environmental impact of the built environment is both a responsibility and an opportunity. We’re making proactive decisions to ensure a sustainable future.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="carde">
+        <h3>4/4</h3>
+        <h4>Diversity</h4>
+        <p>We embrace diversity in all forms, fostering an inclusive culture that empowers individuals and strengthens our business.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </section>
+  <div class="scroll-buttons">
+    <button id="scroll-left">←</button>
+    <button id="scroll-right">→</button>
+  </div>
+  
+  <br>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <!-- Company Information Section -->
+      <div class="footer-section company-info">
+        <h4>SHANMUGAM ASSOCIATES</h4>
+        <p>NO.5, MARIAMMAN KOVIL STREET,</p>
+        <p>VADAVALLI, COIMBATORE-641 046</p>
+        <p><strong>Phone:</strong> +91 9443522285</p>
+        <p><strong>Email:</strong> <a href="mailto:associatesshanmugam@gmail.com">associatesshanmugam@gmail.com</a></p>
+      </div>
+  
+      <!-- Useful Links Section -->
+      <div class="footer-section useful-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services Section -->
+      <div class="footer-section services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Villa</a></li>
+          <li><a href="#">High Rise Building</a></li>
+          <li><a href="#">Painting</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+      <div class="newsletter-section">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Monthly digest of what's new and exciting from us.</p>
+        <form>
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© Copyright SHANMUGAM ASSOCIATES. All Rights Reserved.</p>
+      <p>Designed by <a href="#">newway</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+<script>
+    function setActive(element) {
+        // Remove the 'active' class from all links
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add the 'active' class to the clicked link
+        element.classList.add('active');
+    }
+</script>
